@@ -1,39 +1,69 @@
 import { useState } from 'react';
-import { ChevronDown, Menu, X, Phone } from 'lucide-react';
-import logo from '../assets/suggestinfo-logo.png';
+import { ChevronDown, Menu, X, Phone, ChevronRight } from 'lucide-react';
+import logo from '../assets/service/UAE/WEB DEVELOPMENT/logo-02.png';
 import { useRouter } from '../router';
 
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about', active: true },
-  {
-    label: 'Services',
-    children: [
-      { label: 'Web Development', href: '/services/web' },
-      { label: 'SEO Optimization', href: '/services/seo' },
-      { label: 'UI/UX Design', href: '/services/design' },
-    ],
-  },
-  {
-    label: 'Software',
-    href: '/software',
-  },
-  {
-    label: 'Our Clients',
-    href: '/clients',
-  },
+  { label: 'Services', isMegaMenu: true },
+  { label: 'Software', href: '/software' },
+  { label: 'Our Clients', href: '/clients' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contacts', href: '/contact' },
 ];
 
+const servicesMegaMenuData = {
+  UAE: {
+    'Digital Marketing': [
+      { label: 'SEO Services In Dubai', href: '/services/seo-dubai' },
+      { label: 'Digital Marketing In Dubai', href: '/services/digital-marketing-dubai' },
+    ],
+    'Web Development': [
+      { label: 'Web Development In Dubai', href: '/services/web-development-dubai' },
+      { label: 'E-commerce websites Development in Dubai', href: '/services/ecommerce-dubai' },
+      { label: 'Brand Kit for Dubai UAE', href: '/services/brand-kit-dubai' },
+    ],
+    'Elearning Development': [
+      { label: 'LMS development Services in Dubai', href: '/services/lms-dubai' },
+      { label: 'Moodle Development Services In Dubai', href: '/services/moodle-dubai' },
+    ],
+    'Mobile App Development': [
+      { label: 'Mobile App Development in Dubai', href: '/services/mobile-app-dubai' }
+    ],
+    'Public Relations Services': [
+      { label: 'PR Services in Dubai', href: '/services/pr-dubai' }
+    ],
+    'Content Writing Services': [
+      { label: 'Content Writing in Dubai', href: '/services/content-writing-dubai' }
+    ],
+    'Translation Services': [
+      { label: 'Translation Services in Dubai', href: '/services/translation-dubai' }
+    ],
+  },
+  India: {
+    'Digital Marketing': [],
+    'Web Development': [],
+    'Elearning Development': [],
+    'Mobile App Development': [],
+    'Public Relations Services': [],
+    'Content Writing Services': [],
+    'Translation Services': [],
+  }
+};
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState(null);
+  const [forceClose, setForceClose] = useState(false);
   const { currentPath, navigate } = useRouter();
+
+  const [activeCountry, setActiveCountry] = useState('UAE');
+  const [activeCategory, setActiveCategory] = useState('Digital Marketing');
 
   return (
     <header className="w-full z-50 relative shadow-[0_8px_30px_rgba(0,0,0,0.16)]">
-      <div style={{ backgroundColor: '#0a2e2c' }} className="border-b-4 border-white">
+      <div style={{ backgroundColor: '#0a2e2c' }} className="shadow-md">
         {/* Nav row — min-h forces the bar to be taller; logo fills it top-to-bottom */}
         <div className="w-full px-6 md:px-12 lg:px-16 flex items-stretch" style={{ minHeight: '110px' }}>
 
@@ -57,8 +87,8 @@ export function Header() {
           {/* Desktop Nav — CENTERED */}
           <nav className="hidden lg:flex flex-1 items-center justify-center gap-8">
             {navItems.map((item) =>
-              item.children ? (
-                <div key={item.label} className="dropdown-parent relative">
+              item.isMegaMenu ? (
+                <div key={item.label} className="dropdown-parent relative" onMouseLeave={() => { setActiveCountry('UAE'); setActiveCategory('Digital Marketing'); }}>
                   <button
                     onClick={() => {
                       if (item.label === 'Services') {
@@ -75,22 +105,62 @@ export function Header() {
                     {item.label}
                     <ChevronDown size={16} className="opacity-70 ml-0.5" />
                   </button>
-                  <ul className="nav-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-md shadow-xl min-w-[185px] py-1.5 z-50 border border-slate-100">
-                    {item.children.map((c) => (
-                      <li key={c.label}>
-                        <a
-                          href={c.href}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            navigate(c.href);
-                          }}
-                          className={`block px-5 py-2.5 text-[14px] font-medium transition-colors ${currentPath === c.href
-                              ? 'bg-[#e8f8f5] text-[#3cc994]'
-                              : 'text-gray-700 hover:bg-[#e8f8f5] hover:text-[#3cc994]'
-                            }`}
+                  <ul 
+                    className="nav-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded shadow-xl min-w-[150px] py-2 z-50 border border-slate-100"
+                    style={{ display: forceClose ? 'none' : '' }}
+                  >
+                    {Object.keys(servicesMegaMenuData).map((country) => (
+                      <li key={country} className="relative group/country">
+                        <button
+                          className="w-full flex items-center justify-between px-5 py-2.5 text-[15px] transition-colors group-hover/country:bg-[#3f444c] group-hover/country:text-white text-slate-700 bg-white"
                         >
-                          {c.label}
-                        </a>
+                          {country}
+                          <ChevronRight size={16} />
+                        </button>
+                        
+                        {/* Nested Categories Dropdown */}
+                        <ul className="absolute top-0 left-full hidden group-hover/country:block bg-white rounded shadow-xl min-w-[260px] py-2 border border-slate-100">
+                          {Object.keys(servicesMegaMenuData[country]).map((cat) => (
+                            <li key={cat} className="relative group/cat">
+                              <button
+                                className="w-full flex items-center justify-between px-5 py-2.5 text-[15px] transition-colors group-hover/cat:bg-[#3f444c] group-hover/cat:text-white text-slate-700 bg-white"
+                              >
+                                {cat}
+                                <ChevronRight size={16} />
+                              </button>
+                              
+                              {/* Nested Links Dropdown */}
+                              <ul className="absolute top-0 left-full hidden group-hover/cat:block bg-white rounded shadow-xl min-w-[340px] py-2 border border-slate-100">
+                                {servicesMegaMenuData[country][cat]?.length > 0 ? (
+                                  servicesMegaMenuData[country][cat].map((link) => (
+                                    <li key={link.label}>
+                                      <a
+                                        href={link.href}
+                                        onClick={(e) => {
+                                          e.preventDefault();
+                                          setForceClose(true);
+                                          setTimeout(() => setForceClose(false), 200);
+                                          navigate(link.href);
+                                        }}
+                                        className={`block px-5 py-2.5 text-[15px] font-medium transition-colors ${
+                                          currentPath === link.href
+                                            ? 'text-[#3cc994] bg-[#e8f8f5]'
+                                            : 'text-slate-600 hover:text-[#3cc994] hover:bg-[#e8f8f5]'
+                                        }`}
+                                      >
+                                        {link.label}
+                                      </a>
+                                    </li>
+                                  ))
+                                ) : (
+                                  <li>
+                                    <div className="px-5 py-2.5 text-[15px] text-slate-400 italic">Coming soon...</div>
+                                  </li>
+                                )}
+                              </ul>
+                            </li>
+                          ))}
+                        </ul>
                       </li>
                     ))}
                   </ul>
@@ -166,7 +236,7 @@ export function Header() {
             <nav className="flex-1 overflow-y-auto px-5 py-4">
               <ul className="flex flex-col gap-1">
                 {navItems.map((item) =>
-                  item.children ? (
+                  item.isMegaMenu ? (
                     <li key={item.label}>
                       <button
                         onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
@@ -182,7 +252,7 @@ export function Header() {
                       </button>
                       {mobileExpanded === item.label && (
                         <ul className="pl-4 border-l border-white/10 mb-1">
-                          {item.children.map((c) => (
+                          {Object.entries(servicesMegaMenuData.UAE).flatMap(([cat, links]) => links).map((c) => (
                             <li key={c.label}>
                               <a
                                 href={c.href}

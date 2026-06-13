@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import logo from '../assets/suggestinfo-logo.png';
+import logo from '../assets/service/UAE/WEB DEVELOPMENT/logo-02.png';
 import { useRouter } from '../router';
 
 function FloatingDot({ x, y, size = 10, color = '#3cc994', duration = 6, delay = 0 }) {
