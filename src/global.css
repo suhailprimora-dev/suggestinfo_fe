@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-teal: #0a2e2c;
+  --color-nav-dark: #062220;
+  --color-mint: #e8f8f5;
+  --color-mint-light: #f0faf8;
+  --color-brand-green: #3cc994;
+  --color-brand-green-hover: #2db87f;
+  --color-brand-blue: #00b4d8;
+  --color-lime: #b5d334;
+  --color-teal-icon: #00b4a0;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f0faf8; }
+::-webkit-scrollbar-thumb { background: #3cc994; border-radius: 3px; }
+
+/* WhatsApp float animation */
+@keyframes wa-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+}
+.wa-pulse { animation: wa-pulse 2.5s infinite; }
+
+/* Image placeholder style */
+.img-placeholder {
+  background: linear-gradient(135deg, #e0f2ee 0%, #c8ede6 50%, #d5f0ea 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgba(60, 201, 148, 0.05) 20px,
+    rgba(60, 201, 148, 0.05) 40px
+  );
+}
+
+.img-placeholder-text {
+  color: #3cc994;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 16px;
+  z-index: 1;
+  background: rgba(255,255,255,0.7);
+  border-radius: 8px;
+  border: 1px dashed #3cc994;
+}
+
+/* Service card hover */
+.service-card {
+  transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+}
+.service-card:hover {
+  box-shadow: 0 8px 32px rgba(10,46,44,0.10);
+  transform: translateY(-4px);
+  border-color: rgba(60, 201, 148, 0.4);
+}
+
+/* Dropdown */
+.nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+.dropdown-parent:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
