@@ -1,24 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { PhoneCall, Smartphone, FileText, TrendingUp, Target, MessageSquare } from 'lucide-react';
+import { Smartphone, TrendingUp, Target, Database, Star } from 'lucide-react';
 import { ContactButton } from '../../../components/ContactButton';
 import { ContactSection } from '../../../components/ContactSection';
-import heroBg from '../../../assets/service/UAE/digital marketing/seo service in dubai.png';
-import linkBuildingImg from '../../../assets/service/UAE/digital marketing/Link-Building.png';
-import contentMarketingImg from '../../../assets/service/UAE/digital marketing/Content-Marketing.png';
-import seoImg from '../../../assets/service/UAE/digital marketing/SEO.png';
-import localSeoImg from '../../../assets/service/UAE/digital marketing/Local-SEO.png';
-import arabicSeoImg from '../../../assets/service/UAE/digital marketing/Arabic-SEO.png';
-import seoAuditImg from '../../../assets/service/UAE/digital marketing/SEO-Audit-Analysis.png';
 
-export function SeoServiceDubai() {
+import heroBg from '../../../assets/service/UAE/mobile app development/Section (4).png';
+import androidImg from '../../../assets/service/UAE/mobile app development/Android-Application.png';
+import flutterImg from '../../../assets/service/UAE/mobile app development/Flutter-App-Dev.png';
+import pwaImg from '../../../assets/service/UAE/mobile app development/Progressive-Web-App-Development.png';
+import reactNativeImg from '../../../assets/service/UAE/mobile app development/React-Native-Application.png';
+import webAppImg from '../../../assets/service/UAE/mobile app development/Web-App-Dev.png';
+import iosImg from '../../../assets/service/UAE/mobile app development/iOS-App-Dev.png';
+
+export function MobileAppDubai() {
   return (
     <div className="w-full">
       {/* Hero Section */}
       <section
         className="relative w-full h-[160px] md:h-[200px] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `url(${heroBg})`,
+          backgroundImage: `url('${heroBg}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -28,22 +29,22 @@ export function SeoServiceDubai() {
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center px-4 w-full">
           <h1 className="text-white text-[32px] md:text-[50px] lg:text-[56px] font-extrabold uppercase tracking-wide drop-shadow-lg m-0">
-            SEO SERVICE IN DUBAI
+            MOBILE APP DEVELOPMENT IN DUBAI
           </h1>
         </div>
       </section>
 
-      {/* 2nd Section: Guaranteed SEO Services */}
+      {/* 2nd Section: Guaranteed Services */}
       <section className="py-20 px-6 md:px-12 lg:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
 
           {/* Left Column: Heading and Text */}
           <div className="lg:w-5/12 flex flex-col gap-6">
             <h2 className="text-3xl md:text-[40px] font-extrabold text-[#111827] leading-[1.2] uppercase tracking-tight">
-              Get <span className="bg-gradient-to-r from-[#3cc994] to-[#28a77b] bg-clip-text text-transparent">100% Guaranteed</span> SEO Services from Suggestinfo
+              Get <span className="bg-gradient-to-r from-[#3cc994] to-[#28a77b] bg-clip-text text-transparent">100% Guaranteed</span> Mobile App Development Services at Suggestinfo
             </h2>
             <p className="text-gray-600 text-[16px] leading-relaxed">
-              Our SEO Service Stack is what you require if you want qualified assistance with search engine optimization to raise your website's search exposure, traffic, and sales. No matter what industry you are in or where you are located, if you have a website, we can make it visible in online searches for your target market. We provide conversion rate optimization and services to boost engagement and lowering bounce rates in addition to the analytics team.
+              A Well-Known Mobile App Development Company In Dubai Is Called Suggestinfo. We Make Excellent Solutions Using The Most Recent Technology, Offering Our Clients Access To Ten Times More Customers. To Create Aesthetically Pleasing App Designs That Draw Clients, Our Suggestinfo Designers Apply Their Creative Faculties. Our Developers Begin Working On The Development As Soon As The Methods Are Accepted. We Establish Deadlines At The Start Of A Project And Work Assiduously To Stick To Those Deadlines And Deliver The Software To The Client.
             </p>
             <div className="mt-4">
               <ContactButton />
@@ -59,7 +60,7 @@ export function SeoServiceDubai() {
                 <Smartphone className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
               </div>
               <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
-                Our Mobile-Responsive Website Was Advised Because Mobile Devices Were The Primary Traffic Source.
+                We Suggetinfo Use Cutting-Edge Technology To Help Businesses Become More Productive.
               </p>
             </div>
 
@@ -67,10 +68,10 @@ export function SeoServiceDubai() {
             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3cc994] to-[#28a77b]"></div>
               <div className="w-14 h-14 bg-[#e8f8f5] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3cc994] transition-colors duration-300 shadow-sm">
-                <FileText className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
+                <TrendingUp className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
               </div>
               <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
-                Multiple Content Gaps Were Found, And These Holes Were Filled By Producing New Content, Including Copy And Photos.
+                Our Mobile App Development Services Aid In Boosting Businesses' Growth And Sales.
               </p>
             </div>
 
@@ -78,10 +79,10 @@ export function SeoServiceDubai() {
             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3cc994] to-[#28a77b]"></div>
               <div className="w-14 h-14 bg-[#e8f8f5] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3cc994] transition-colors duration-300 shadow-sm">
-                <TrendingUp className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
+                <Target className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
               </div>
               <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
-                We Received A High Position For Non-Branded Terms Thanks To The SEO Involvement.
+                Our Services Provide Companies With Adaptable Ways To Understand Their Clients Better.
               </p>
             </div>
 
@@ -89,10 +90,21 @@ export function SeoServiceDubai() {
             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3cc994] to-[#28a77b]"></div>
               <div className="w-14 h-14 bg-[#e8f8f5] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3cc994] transition-colors duration-300 shadow-sm">
-                <Target className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
+                <Database className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
               </div>
               <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
-                High-Converting Keywords Were Subsequently Targeted At The Optimized Site To Enhance Bookings.
+                We As Suggetinfo Can Gather Information Regarding Customer Usage And Behavior.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3cc994] to-[#28a77b]"></div>
+              <div className="w-14 h-14 bg-[#e8f8f5] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3cc994] transition-colors duration-300 shadow-sm">
+                <Star className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
+              </div>
+              <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
+                Our Services Contribute To Customer's Businesses Having More Incredible Value.
               </p>
             </div>
           </div>
@@ -104,7 +116,7 @@ export function SeoServiceDubai() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-[40px] font-extrabold text-[#111827] uppercase tracking-wide">
-              OUR SERVICES
+              OUR MOBILE APP DEVELOPMENT SERVICES
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -117,12 +129,12 @@ export function SeoServiceDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-40 overflow-hidden relative rounded-b-[24px]">
-                <img src={linkBuildingImg} alt="Link Building" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={androidImg} alt="Android Application Development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">Link Building</h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3 leading-snug">Android Application<br />Development</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  The Next Stage Is To Create High-Quality Backlinks To Your Website, Which Will Assist In Authenticating Your Keywords. Suggestinfo SEO Has A Dedicated Team Focused On Creating High-Quality, Authoritative Backlinks As Part Of Its Link-Building Efforts.
+                  According To Numerous Reports, Google Play Store Is The Largest App Store In The World, Making It The Top Platform For Developing Native Apps. We Suggestinfo Are A Top-Tier Bespoke Solution Provider For Smartphones, Tablets, Android Wear, And Android TV In Dubai.
                 </p>
               </div>
             </motion.div>
@@ -136,12 +148,12 @@ export function SeoServiceDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-40 overflow-hidden relative rounded-b-[24px]">
-                <img src={contentMarketingImg} alt="Content Marketing" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={reactNativeImg} alt="React Native Application Development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">Content Marketing</h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3 leading-snug">React Native Application<br />Development</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  You Need Specific High-Quality Content To Support Your Assets When You Have A Particular Product Or Service. Google Has Mandated That Users Only Choose Data With Rich Information In Light Of The Current Craze. Being The SEO Dubai Agency, We Open The Door For SEO Content Marketing With Our Team Of Talented Content Writers.
+                  Our React Native App Development Service Specialists Create React Native Apps From Scratch Or Incorporate The Framework Into Your Current Application To Hasten The App Delivery Process. Our Experts Will Sit Down With You To Discuss Your Product Vision And Determine How To Connect The App With Your Business Goals Best.
                 </p>
               </div>
             </motion.div>
@@ -155,12 +167,12 @@ export function SeoServiceDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-40 overflow-hidden relative rounded-b-[24px]">
-                <img src={seoImg} alt="Search Engine Optimization" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={webAppImg} alt="Web App Development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3 leading-snug">Search Engine<br />Optimization</h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3">Web App Development</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  We Include Both On-Page And Off-Page Tasks. The Earlier Effort Assists In Changing Your Website To Have The Products You Want To Target For The Search Engines. The Off-Page Duties Assist In Acquiring High-Quality Backlinks That Give The Search Engines A Way To Determine Your Credibility As A Source And Help You Rank Well.
+                  We Suggestinfo Provide Web App Development Services That Are Reliable And Scalable. Our Specifically Designed To Address Your Company's Needs. We Build Web Portals With The Best Performance, Cost-Efficiency, And Expansion Potential By Utilizing The Newest Web Technologies And Adhering To The Agile Methodology
                 </p>
               </div>
             </motion.div>
@@ -174,12 +186,12 @@ export function SeoServiceDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-40 overflow-hidden relative rounded-b-[24px]">
-                <img src={arabicSeoImg} alt="Arabic SEO" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={flutterImg} alt="Flutter App Development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">Arabic SEO</h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3">Flutter App Development</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  It Has Become Vital To Meet The Needs Of The Local Consumer, And It Given That Arabic Is The Native Tongue Of The Dubai. Our Skilled Arabic SEO Specialists Can Target Keywords And Content In The Regional Language
+                  Our Flutter App Development Services Are The Best Option If Your Business Needs A Cross-Platform Presence. To Design, Create, Test, And Deploy Complete Flutter Applications, Work With Our Highly Qualified Team Of App Developers In Dubai To Identify The Optimal Product-Market Fit.
                 </p>
               </div>
             </motion.div>
@@ -193,12 +205,12 @@ export function SeoServiceDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-40 overflow-hidden relative rounded-b-[24px]">
-                <img src={localSeoImg} alt="Local SEO" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={iosImg} alt="iOS App Development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">Local SEO</h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3">iOS App Development</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  Local SEO Is One Of The Many Branches That SEO Has Developed In Your Business. You Can Establish A Local Internet Presence In The Market You Want To Serve. With SEO, You May Target And Meet The Demands Of Visitors To A Specific Location. This Kind Of SEO Can Increase Foot Traffic And Attract Buyers From The Nearby Market.
+                  Our Team Of Mobile App Developers Creates Flawless, Next-Generation IOS Apps. We Suggestinfo Are A Full-Stack IOS App Development Company In Dubai. We Have Released Hundreds Of Native IOS Applications That Have Not Only Seen Exponential Growth In The Success Rates Of Our Client's Businesses.
                 </p>
               </div>
             </motion.div>
@@ -212,12 +224,12 @@ export function SeoServiceDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-40 overflow-hidden relative rounded-b-[24px]">
-                <img src={seoAuditImg} alt="SEO Audit & Analysis" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={pwaImg} alt="Progressive Web App Development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">SEO Audit & Analysis</h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3 leading-snug">Progressive Web App<br />Development</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  We Want Our Clients To Journey With Us Through The SEO Process. We Create A Thorough Site Analysis And Assist You In Understanding The Traffic And Rankings You Have Obtained As A Result Of Working With Us. We Offer A Comprehensive Monthly Report On All The Duties And Operations We Handle As The Finest SEO Company In Dubai.
+                  We Provide Top-Notch Progressive Web App Development Services With The Appearance And Feel Of A Mobile Application, And Suggestinfo Is A Leading Mobile App Development In Dubai. Our Advanced Web Applications Guarantee A Fluid Performance And Maximum User Engagement For Your Company.
                 </p>
               </div>
             </motion.div>
@@ -225,12 +237,12 @@ export function SeoServiceDubai() {
         </div>
       </section>
 
-      {/* 4th Section: Why Choose Our SEO Services */}
+      {/* 4th Section: Why Choose Us */}
       <section className="py-20 relative overflow-hidden">
         <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-[40px] font-extrabold text-[#000000] uppercase tracking-wide leading-tight">
-              WHY CHOOSE OUR SEO<br />SERVICES?
+              WHY CHOOSE OUR SUGGESTINFO?
             </h2>
           </div>
 
@@ -245,11 +257,11 @@ export function SeoServiceDubai() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
-                className="bg-gradient-to-br from-[#f8faff] to-[#e2ecfa] p-6 md:p-8 rounded-[28px]"
+                className="bg-gradient-to-br from-[#f8faff] to-[#e2ecfa] p-6 md:p-8 rounded-[28px] shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-shadow duration-300"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Experience And Professionalism</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Award-Winning Solutions</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  The level of expertise of the service provider does significantly when it comes to success in the digital sphere. As one of the top SEO companies in Dubai, we have a staff of qualified SEO specialists with experience in various industries.
+                  We are a seasoned and competent group of technologists driven by our unrelenting quest to create cutting-edge mobile application development solutions. Our history of awards and recognitions is evidence of our dedication to and diligence in our work.
                 </p>
               </motion.div>
 
@@ -259,11 +271,11 @@ export function SeoServiceDubai() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
-                className="bg-gradient-to-br from-[#fff2ef] to-[#fce4de] p-6 md:p-8 rounded-[28px]"
+                className="bg-gradient-to-br from-[#fff6f0] to-[#fdeae1] p-6 md:p-8 rounded-[28px] shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-shadow duration-300"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Regular And Planned Communication</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Flexible Engagement</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  Regular and Planned Communication We value openness and provide planned and routine communication to assist our clients in succeeding. We want to maintain long-term relationships with our clients, and we keep them regularly informed about the status of our online marketing efforts
+                  For our client's precise needs, we provide a variety of interaction methods. We can accommodate your needs, whether for a fixed budget model, a time and material model, or a fully committed development staff.
                 </p>
               </motion.div>
 
@@ -273,11 +285,11 @@ export function SeoServiceDubai() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-                className="bg-gradient-to-br from-[#f1fcfb] to-[#e2f5f1] p-6 md:p-8 rounded-[28px]"
+                className="bg-gradient-to-br from-[#f0fffa] to-[#d6f7eb] p-6 md:p-8 rounded-[28px] shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-shadow duration-300"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Regular And Planned Communication</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Identify The Ideal Blend</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  Regular and Planned Communication We value openness and provide planned and routine communication to assist our clients in succeeding. We want to maintain long-term relationships with our clients, and we keep them regularly informed about the status of our online marketing efforts
+                  We guarantee that we will use our knowledge and experience to improve your web presence in the crowded mobile app sector through a skillful fusion of design, development, and marketing. By locating attractive iOS, Android, and cross-platform mobile apps suited to business needs, we transmit flexibility to your company.
                 </p>
               </motion.div>
 
@@ -287,25 +299,22 @@ export function SeoServiceDubai() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
-                className="bg-gradient-to-br from-[#f9f7fc] to-[#efe9f8] p-6 md:p-8 rounded-[28px]"
+                className="bg-gradient-to-br from-[#f9f7fc] to-[#efe9f8] p-6 md:p-8 rounded-[28px] shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-shadow duration-300"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Realistic And Honest Commitment</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Identification Of Business Objectives</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  Our Dubai SEO professionals are fully aware of how difficult it is to rank a website on the first page of a search engine, but we never overpromise or seem to care about our clients.
+                  At Suggestinfo, we collaborate closely with our clients to define their business goals and create mobile applications that improve people's lives. We investigate the best mobile app options and tell us your business objectives, and we will work with you to create the mobile applications of your dreams.
                 </p>
               </motion.div>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* 5th Section: Contact Form */}
+
+      {/* Contact Form */}
       <ContactSection 
-        title={<>Get Quote For Search<br />Engine Optimization</>}
-        subtitle="Call us for fast support to this number."
+        title={<>Get Quote For Mobile App<br />Development</>}
       />
     </div>
   );
 }
-
-export default SeoServiceDubai;

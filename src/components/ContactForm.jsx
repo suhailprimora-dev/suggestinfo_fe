@@ -35,7 +35,7 @@ export function ContactForm() {
 
   return (
     <div className="bg-gradient-to-br from-white via-white to-[#f0faf8] rounded-[32px] p-8 md:p-12 shadow-[0_45px_100px_-15px_rgba(10,46,44,0.18)] border border-[#d0ede6] hover:border-[#3cc994]/45 relative overflow-hidden transition-all duration-500 w-full">
-      
+
       {/* Decorative vector waves inside form box for custom designer touch */}
       <div className="absolute right-0 bottom-0 opacity-15 pointer-events-none w-1/2 h-1/2">
         <svg className="w-full h-full fill-[#3cc994]" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -53,7 +53,7 @@ export function ContactForm() {
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#3cc994]/15 rounded-full blur-3xl pointer-events-none -ml-24 -mb-24" />
 
       {submitted ? (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="flex flex-col items-center justify-center py-16 text-center relative z-10"
@@ -75,7 +75,7 @@ export function ContactForm() {
 
           {/* 2x3 Form Inputs Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
+
             {/* Name */}
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -187,11 +187,11 @@ export function ContactForm() {
                   I&apos;m not a robot
                 </label>
               </div>
-              
+
               {/* Recaptcha Brand */}
               <div className="flex flex-col items-center justify-center pl-4 text-center border-l border-slate-100 flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-500 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" />
                 </svg>
                 <span className="text-[9px] font-bold text-gray-400 mt-0.5 tracking-tight">reCAPTCHA</span>
                 <span className="text-[7px] text-gray-400 tracking-tighter leading-none">Privacy - Terms</span>

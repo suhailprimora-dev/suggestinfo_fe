@@ -2,16 +2,16 @@ import React from 'react';
 import { PhoneCall, Monitor, ShieldCheck, Users, Layers, Code } from 'lucide-react';
 import { ContactButton } from '../../../components/ContactButton';
 import { motion } from 'framer-motion';
-import heroBg from '../../../assets/service/UAE/WEB DEVELOPMENT/Section (1).png';
-import img1 from '../../../assets/service/UAE/WEB DEVELOPMENT/Developing-Progressive-Web.png';
-import img2 from '../../../assets/service/UAE/WEB DEVELOPMENT/Development-Of-Dynamic-web.png';
-import img3 from '../../../assets/service/UAE/WEB DEVELOPMENT/Integration-of-CRM.png';
-import img4 from '../../../assets/service/UAE/WEB DEVELOPMENT/Website-Maintenance.png';
-import img5 from '../../../assets/service/UAE/WEB DEVELOPMENT/Website-QA-Checks.png';
-import img6 from '../../../assets/service/UAE/WEB DEVELOPMENT/WordPress-Growth.png';
+import heroBg from '../../../assets/service/UAE/WEB DEVELOPMENT/e commerce.png';
+import img1 from '../../../assets/service/UAE/WEB DEVELOPMENT/Application-developments.png';
+import img2 from '../../../assets/service/UAE/WEB DEVELOPMENT/CMS.png';
+import img3 from '../../../assets/service/UAE/WEB DEVELOPMENT/Ecommerce-support.png';
+import img4 from '../../../assets/service/UAE/WEB DEVELOPMENT/Inventory-management.png';
+import img5 from '../../../assets/service/UAE/WEB DEVELOPMENT/Personalized.png';
+import img6 from '../../../assets/service/UAE/WEB DEVELOPMENT/Website-development-for-E-Commerce.png';
 import { ContactSection } from '../../../components/ContactSection';
 
-export function WebDevelopmentDubai() {
+export function EcommerceDubai() {
   return (
     <div className="w-full bg-white">
       {/* 1st Section: Hero Banner */}
@@ -27,7 +27,7 @@ export function WebDevelopmentDubai() {
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center px-4 w-full">
           <h1 className="text-white text-[28px] md:text-[50px] lg:text-[56px] font-extrabold uppercase tracking-wide drop-shadow-lg m-0">
-            WEBSITE DEVELOPMENT IN DUBAI
+            E-COMMERCE DEVELOPMENT IN DUBAI
           </h1>
         </div>
       </section>
@@ -41,18 +41,15 @@ export function WebDevelopmentDubai() {
         </div>
 
         <div className="max-w-[1250px] mx-auto px-6 md:px-12 relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center lg:items-start">
-
+          
           {/* Left Column: Text Content */}
-          <div className="lg:w-7/12 flex flex-col gap-6">
-            <h2 className="text-[28px] lg:text-[28px] xl:text-[32px] font-bold leading-[1.3] text-[#111827] uppercase tracking-tight">
-              OBTAIN CUTTING-EDGE<br />
-              TECHNOLOGY WITH EXCELLENT<br />
-              WEBSITE DEVELOPMENT FROM<br />
-              SUGGESTINFO
+          <div className="lg:w-5/12 flex flex-col gap-6">
+            <h2 className="text-[26px] md:text-[30px] lg:text-[34px] font-bold leading-[1.3] text-[#111827] uppercase tracking-tight">
+              APPROACH SUGGESTINFO TO GET TOP ECOMMERCE DEVELOPMENT SERVICES IN DUBAI
             </h2>
-
+            
             <p className="text-[#4b5563] text-[15px] leading-[1.8] font-medium">
-              The Initial Step In Creating An Online Persona Is To Have A Totally Functional Website That Is Up To Date With Best IT Trends. A Combination Of Creativity, Expertise, And Imagination Is Needed To Build A Powerful Online Presence. We Suggestinfo, A Renowned Leader In Website Development In Dubai, Has Combined Creativity And Experience With Offering Highly Dynamic Web Solutions For A Diverse Clientele. Our Expert Development Group Has Continuously Provided A Full Choice Of Programming And Development Solutions That Are Particularly Designed For Various Requirements.
+              Suggestinfo Is Committed To Providing Streamlined And Effective E-Commerce Solutions To Its Clients In Dubai. We Design Powerful Web Stores And Applications That Are Mobile-Responsive And Elegant Design. In Order To Create Scalable And Reliable Online Stores For Both Web And Mobile, Our Highly Competent Team Of Experienced Ecommerce Developers In Dubai Closely Collaborates With The Clients On Their Requirements. Utilize Our First-Rate ECommerce Solutions To Differentiate You From The Competition And Significantly Influence The Market More Than Before. We Can Assist You In Exceeding The Seemingly Impossible Company Goal.
             </p>
 
             <div className="mt-4">
@@ -63,13 +60,13 @@ export function WebDevelopmentDubai() {
           {/* Right Column: Feature Cards */}
           <div className="lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-8 lg:mt-0">
             {[
-              { text: "Our Web Designers Will Assist Your Company In Creating A Strong Online Presence.", icon: Monitor },
-              { text: "We Provide Exemplary, High-Performance, And Secure Online Apps.", icon: ShieldCheck },
-              { text: "Our Programmers Promise Businesses An Unrivaled User-Friendly Experience.", icon: Users },
-              { text: "We Support The Idea Of Creating All-Encompassing Platforms.", icon: Layers },
-              { text: "Our Designers And Developers Use The Most Recent Technologies For Creating Websites.", icon: Code }
+              { text: "Hire Our Committed ECommerce Developers Today To Dominate Your Sector.", icon: Users },
+              { text: "We Have The Expertise In Both People And Technology To Assist You In Realizing Your Idea", icon: Monitor },
+              { text: "We Are Qualified To Satisfy All Of Your E-Commerce Needs.", icon: ShieldCheck },
+              { text: "We Develop Strong, Personalized Online Ecommerce Websites Globally.", icon: Layers },
+              { text: "You May Keep On Top Of Your Competitors With The Assistance Of Our E-Commerce Company.", icon: Code }
             ].map((item, idx) => (
-              <motion.div
+              <motion.div 
                 key={idx}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -96,13 +93,13 @@ export function WebDevelopmentDubai() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-[40px] font-extrabold text-[#111827] uppercase tracking-wide">
-              OUR BEST WEBSITE DEVELOPMENT SERVICES
+              OUR ECOMMERCE DEVELOPMENT SERVICED
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
+            
             {/* Service Card 1 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -110,18 +107,18 @@ export function WebDevelopmentDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-48 overflow-hidden relative rounded-b-[24px]">
-                <img src={img2} alt="Development Of Dynamic Websites" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={img5} alt="Personalized Ecommerce development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Development Of Dynamic<br />Websites</h3>
+                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Personalized Ecommerce<br/>development</h3>
                 <p className="text-gray-600 text-[13px] leading-[1.8] font-medium">
-                  Dynamic Websites Is The Most Appropriate Choice For Any Expanding Firm Since They Are Expansive And Evolving Digital Places That Permit Ongoing Transformation, Simple Updates, And Easy Maintenance. We Can Provide You With Specialized, Robust, Responsive, And User-Friendly Dynamic Digital Properties.
+                  There Are No Two Identical Company Concepts That Have Achieved Success. This Indicates That In Order To Succeed In The World Of ECommerce, You Must Act Uniquely. This Is Why You May Realize These Fantastic Ideas And Capture The Market Using Our Bespoke ECommerce Development Services.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 2 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -129,18 +126,18 @@ export function WebDevelopmentDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-48 overflow-hidden relative rounded-b-[24px]">
-                <img src={img6} alt="WordPress Growth" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={img4} alt="Inventory management" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">WordPress Growth</h3>
+                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Inventory<br/>management</h3>
                 <p className="text-gray-600 text-[13px] leading-[1.8] font-medium">
-                  Business Owners May Manage Stunning Feature-Rich Websites Using WordPress’s Highly Powerful And User-Friendly Content Management System Without The Need For Ongoing Development Help. We Can Help You In Using The Platform’s Amazing Features To Create A Unique And Effective Online Presence For Your Company.
+                  Thanks To An Inventory Management System, Your Company Can Manage The Inventory Of Stocks And Orders, These Are Necessary For An ECommerce Operation To Run Smoothly. In Addition To Offering The Best Development Services, Suggestinfo Is An Ecommerce Development Company That Also Makes It Simple For You To Manage Inventory.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 3 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -148,18 +145,18 @@ export function WebDevelopmentDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-48 overflow-hidden relative rounded-b-[24px]">
-                <img src={img1} alt="Developing Progressive Web Apps" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={img1} alt="Application development for mobile" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Developing Progressive<br />Web Apps</h3>
+                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Application development<br/>for mobile</h3>
                 <p className="text-gray-600 text-[13px] leading-[1.8] font-medium">
-                  With The Subsequent Development In Mobile Technology, An Entity That Combines The Characteristics, Functions, And Advantages Of Mobile And App Technology Enjoys The Added Benefits Of Cross-Device And Multi-Browser Reach.
+                  Nearly Everyone Is Holding A Cell Phone In Their Hand. This Indicates That There Are Several Viewers Who Could Become Your Future Clients. You Can Find The Ideal ECommerce Mobile Application You Need With Our First-Rate Software Development Services For E-Commerce Applications.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 4 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -167,18 +164,18 @@ export function WebDevelopmentDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-48 overflow-hidden relative rounded-b-[24px]">
-                <img src={img5} alt="Website QA Checks And Testing" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={img2} alt="Development of CMS" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Website QA Checks And<br />Testing</h3>
+                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Development of CMS</h3>
                 <p className="text-gray-600 text-[13px] leading-[1.8] font-medium">
-                  Regardless Of Its Size, Platform, Or Industry, It Is Ever Launched Without First Passing A Series Of Methodical, Exacting, And Demanding QA Inspections To Guarantee That It Is Free Of Any Defects Or Problems That Might Impair Customer Engagement Or Brand Value.
+                  Every Industry Has Specific Requirements. However, CMS Maintains Its Significance Across All Sectors. Because Of This, CMS Is One Of The Services We Highlight Under ECommerce Development. You Can Enjoy The Most Incredible Experience Possible With This.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 5 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -186,18 +183,18 @@ export function WebDevelopmentDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-48 overflow-hidden relative rounded-b-[24px]">
-                <img src={img4} alt="Website Maintenance" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={img6} alt="Website development for E-Commerce" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Website Maintenance</h3>
+                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Website development for<br/>E-Commerce</h3>
                 <p className="text-gray-600 text-[13px] leading-[1.8] font-medium">
-                  Your Website Has To Be Updated, Resecured, And Maintained On A Regular Basis, Just Like Any Other Tool You Could Use In Your Organization. We Can Provide You With A Range Of Specialized Website Maintenance Services.
+                  Many People Continue To Use Older Methods Of Online Browsing. This Is Just One Of The Factors That Make A Website Necessary. Even In The Smartphone Era, Any ECommerce Business Needs To Have A Website. The Top ECommerce Development Company In Dubai Suggestinfo Provides The Website Development Services You Require.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 6 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -205,12 +202,12 @@ export function WebDevelopmentDubai() {
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
               <div className="h-48 overflow-hidden relative rounded-b-[24px]">
-                <img src={img3} alt="Integration of CRM With Website" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={img3} alt="Ecommerce support & maintenance" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Integration of CRM With<br />Website</h3>
+                <h3 className="text-[22px] font-bold text-[#111827] mb-3 leading-tight">Ecommerce support &<br/>maintenance</h3>
                 <p className="text-gray-600 text-[13px] leading-[1.8] font-medium">
-                  The Ideal CRM Solution May Revolutionize Any Company By Serving As A Single Control Point For All Of The Most Essential Business Operations. Suggestinfo Can Assist You In Selecting The Ideal CRM Solution For Your Particular Business Needs And Integrating It Successfully And Stably Into Your Infrastructure.
+                  You Require The Proper Maintenance And Support Services To Guarantee That Your ECommerce Businesses Never Go Offline While Your Clients Watch. Any Application's Or Website's Maintenance Is Equally As Crucial As Its Development. You Can Guarantee Seamless ECommerce Maintenance And Round-The-Clock Assistance With Our Services
                 </p>
               </div>
             </motion.div>
@@ -224,7 +221,7 @@ export function WebDevelopmentDubai() {
         <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-[40px] font-extrabold text-[#000000] uppercase tracking-wide leading-tight">
-              REASONS TO CHOOSE US
+              WHY CHOOSE SUGGESTINFO AS YOUR ECOMMERCE DEVELOPMENT COMPANY
             </h2>
           </div>
 
@@ -234,58 +231,58 @@ export function WebDevelopmentDubai() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 relative z-10">
               {/* Card 1 */}
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
                 className="bg-gradient-to-br from-[#f8faff] to-[#e2ecfa] p-6 md:p-8 rounded-[28px]"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Increased Customer Satisfaction</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Excellent Time-Saving</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  Make the most of your dealings with customers. We will provide a well-organized, user-friendly website that exactly matches your customer's journey, captures the essence of your organization, and enhances the user experience.
+                  You can save time and work with our e-commerce web development. To finish this work, you don't have to spend additional time hiring, managing, and training your entire team.
                 </p>
               </motion.div>
 
               {/* Card 2 */}
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
                 className="bg-gradient-to-br from-[#fff2ef] to-[#fce4de] p-6 md:p-8 rounded-[28px]"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Obtain Beneficial Consumer Insights</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Improved Webpage</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  With our website development services, your company not only establishes a strong online presence but also gains access to a wide range of customer-centric data and analytics, enabling you to understand better and address the wants of the target listeners.
+                  Due to our expertise and experience, our e-commerce development can create optimized websites and increase sales for their clients. According to your request and budget, we can add the features and components that are most appropriate for your e-commerce site
                 </p>
               </motion.div>
 
               {/* Card 3 */}
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
                 className="bg-gradient-to-br from-[#effcf7] to-[#d6f8eb] p-6 md:p-8 rounded-[28px]"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Develop Your Commercial Credibility</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Improved Workforce And Resource Allocation</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  As a result, a credible company usually expects to have a good website where potential clients can obtain all the details about it. A solid first impression may be made, and clients can feel confident by visiting a well-branded website, which gives your target audience a reliable point of reference.
+                  The client's project manager does not have to engage in much of the development work because we complete the entire project autonomously. As a result, the procedure is easy to understand from the development perspective and might be quickly missed.
                 </p>
               </motion.div>
 
               {/* Card 4 */}
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.55, ease: "easeOut" }}
                 className="bg-gradient-to-br from-[#f8f0fc] to-[#fae2fb] p-6 md:p-8 rounded-[28px]"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Expand The Size Of Your Market</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Technical Assistance</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  Being more visible online allows you to reach a wider audience because it eliminates geographic restrictions and is available round-the-clock. Our Website development combined with effective SEO tactics gives you a fully functional website that draws worthwhile traffic and qualified leads.
+                  Suggestinfo is aware of the workflow's technological requirements. We fully support you and are aware of the best software currently on the market, per e-commerce requirements
                 </p>
               </motion.div>
             </div>
@@ -294,8 +291,8 @@ export function WebDevelopmentDubai() {
       </section>
 
       {/* 5th Section: Contact Form */}
-      <ContactSection
-        title={<>Get Quote For Web<br />Development Services</>}
+      <ContactSection 
+        title={<>Get Quote For E-Commerce<br />Development Services</>}
       />
 
     </div>

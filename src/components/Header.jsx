@@ -32,7 +32,7 @@ const servicesMegaMenuData = {
       { label: 'Mobile App Development in Dubai', href: '/services/mobile-app-dubai' }
     ],
     'Public Relations Services': [
-      { label: 'PR Services in Dubai', href: '/services/pr-dubai' }
+      { label: 'PR Services in Dubai', href: '/services/public-relations-dubai' }
     ],
     'Content Writing Services': [
       { label: 'Content Writing in Dubai', href: '/services/content-writing-dubai' }
@@ -42,13 +42,24 @@ const servicesMegaMenuData = {
     ],
   },
   India: {
-    'Digital Marketing': [],
-    'Web Development': [],
-    'Elearning Development': [],
-    'Mobile App Development': [],
-    'Public Relations Services': [],
-    'Content Writing Services': [],
-    'Translation Services': [],
+    'Digital Marketing': [
+      { label: 'SEO Services in India', href: '/services/india/seo-services' },
+      { label: 'Social Media Marketing Services in India', href: '/services/india/social-media-marketing' },
+      { label: 'SMS Marketing & Database Services in India', href: '/services/india/sms-marketing' },
+      { label: 'Lead Generation (Pay Per Lead Services)', href: '/services/india/lead-generation' }
+    ],
+    'Web Development': [
+      { label: 'Custom Website Development in India', href: '/services/india/custom-website-development' },
+      { label: 'WordPress CMS Development in India', href: '/services/india/wordpress-development' },
+      { label: 'E-commerce Website Development in India', href: '/services/india/ecommerce-development' },
+      { label: 'Website Maintenance and Services in India', href: '/services/india/website-maintenance' },
+      { label: 'Brand Kit for Chennai', href: '/services/india/brand-kit' }
+    ],
+    'Mobile App Development': [
+      { label: 'Android App Development in India', href: '/services/india/android-app-development' },
+      { label: 'IOS App Development in India', href: '/services/india/ios-app-development' }
+    ],
+    'Elearning Development': []
   }
 };
 
@@ -120,46 +131,72 @@ export function Header() {
                         
                         {/* Nested Categories Dropdown */}
                         <ul className="absolute top-0 left-full hidden group-hover/country:block bg-white rounded shadow-xl min-w-[260px] py-2 border border-slate-100">
-                          {Object.keys(servicesMegaMenuData[country]).map((cat) => (
-                            <li key={cat} className="relative group/cat">
-                              <button
-                                className="w-full flex items-center justify-between px-5 py-2.5 text-[15px] transition-colors group-hover/cat:bg-[#3f444c] group-hover/cat:text-white text-slate-700 bg-white"
-                              >
-                                {cat}
-                                <ChevronRight size={16} />
-                              </button>
-                              
-                              {/* Nested Links Dropdown */}
-                              <ul className="absolute top-0 left-full hidden group-hover/cat:block bg-white rounded shadow-xl min-w-[340px] py-2 border border-slate-100">
-                                {servicesMegaMenuData[country][cat]?.length > 0 ? (
-                                  servicesMegaMenuData[country][cat].map((link) => (
-                                    <li key={link.label}>
-                                      <a
-                                        href={link.href}
-                                        onClick={(e) => {
-                                          e.preventDefault();
-                                          setForceClose(true);
-                                          setTimeout(() => setForceClose(false), 200);
-                                          navigate(link.href);
-                                        }}
-                                        className={`block px-5 py-2.5 text-[15px] font-medium transition-colors ${
-                                          currentPath === link.href
-                                            ? 'text-[#3cc994] bg-[#e8f8f5]'
-                                            : 'text-slate-600 hover:text-[#3cc994] hover:bg-[#e8f8f5]'
-                                        }`}
-                                      >
-                                        {link.label}
-                                      </a>
-                                    </li>
-                                  ))
+                          {Object.keys(servicesMegaMenuData[country]).map((cat) => {
+                            const catLinks = servicesMegaMenuData[country][cat];
+                            const isSingleLink = catLinks?.length === 1;
+
+                            return (
+                              <li key={cat} className="relative group/cat">
+                                {isSingleLink ? (
+                                  <a
+                                    href={catLinks[0].href}
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      setForceClose(true);
+                                      setTimeout(() => setForceClose(false), 200);
+                                      navigate(catLinks[0].href);
+                                    }}
+                                    className={`w-full flex items-center justify-between px-5 py-2.5 text-[15px] transition-colors group-hover/cat:bg-[#3f444c] group-hover/cat:text-white ${
+                                      currentPath === catLinks[0].href
+                                        ? 'text-[#3cc994] bg-slate-50'
+                                        : 'text-slate-700 bg-white'
+                                    }`}
+                                  >
+                                    {cat}
+                                  </a>
                                 ) : (
-                                  <li>
-                                    <div className="px-5 py-2.5 text-[15px] text-slate-400 italic">Coming soon...</div>
-                                  </li>
+                                  <>
+                                    <button
+                                      className="w-full flex items-center justify-between px-5 py-2.5 text-[15px] transition-colors group-hover/cat:bg-[#3f444c] group-hover/cat:text-white text-slate-700 bg-white"
+                                    >
+                                      {cat}
+                                      <ChevronRight size={16} />
+                                    </button>
+                                    
+                                    {/* Nested Links Dropdown */}
+                                    <ul className="absolute top-0 left-full hidden group-hover/cat:block bg-white rounded shadow-xl min-w-[340px] py-2 border border-slate-100">
+                                      {catLinks?.length > 0 ? (
+                                        catLinks.map((link) => (
+                                          <li key={link.label}>
+                                            <a
+                                              href={link.href}
+                                              onClick={(e) => {
+                                                e.preventDefault();
+                                                setForceClose(true);
+                                                setTimeout(() => setForceClose(false), 200);
+                                                navigate(link.href);
+                                              }}
+                                              className={`block px-5 py-2.5 text-[15px] font-medium transition-colors ${
+                                                currentPath === link.href
+                                                  ? 'text-[#3cc994] bg-[#e8f8f5]'
+                                                  : 'text-slate-600 hover:text-[#3cc994] hover:bg-[#e8f8f5]'
+                                              }`}
+                                            >
+                                              {link.label}
+                                            </a>
+                                          </li>
+                                        ))
+                                      ) : (
+                                        <li>
+                                          <div className="px-5 py-2.5 text-[15px] text-slate-400 italic">Coming soon...</div>
+                                        </li>
+                                      )}
+                                    </ul>
+                                  </>
                                 )}
-                              </ul>
-                            </li>
-                          ))}
+                              </li>
+                            );
+                          })}
                         </ul>
                       </li>
                     ))}

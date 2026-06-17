@@ -30,12 +30,17 @@ export function ContactSection({ title, subtitle }) {
           )}
 
           <div className="flex flex-col gap-6">
-            <a href="tel:+971582767237" className="text-[28px] md:text-[32px] font-black text-black hover:text-[#44c391] transition-colors tracking-wide">
-              +971 58 276 7237
-            </a>
             <a href="tel:+971524828215" className="text-[28px] md:text-[32px] font-black text-black hover:text-[#44c391] transition-colors tracking-wide">
-              +971 52 482 8215
+              UAE: +971 52 482 8215
             </a>
+            <a href="tel:+917339131492" className="text-[28px] md:text-[32px] font-black text-black hover:text-[#44c391] transition-colors tracking-wide">
+              IND: +91 73391 31492
+            </a>
+            <div className="mt-2">
+              <button className="bg-[#8b5cf6] hover:bg-[#7c3aed] text-white px-8 py-3.5 rounded-md text-[16px] font-medium transition-colors shadow-sm cursor-pointer">
+                Enquire Now
+              </button>
+            </div>
           </div>
         </div>
       </div>

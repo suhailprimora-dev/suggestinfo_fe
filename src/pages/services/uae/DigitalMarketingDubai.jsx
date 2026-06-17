@@ -1,5 +1,6 @@
 import React from 'react';
 import { PhoneCall, Target, TrendingUp, MessageSquare } from 'lucide-react';
+import { ContactButton } from '../../../components/ContactButton';
 import { motion } from 'framer-motion';
 import { ContactSection } from '../../../components/ContactSection';
 import heroBg from '../../../assets/service/UAE/digital marketing/Container (5).png';
@@ -44,13 +45,7 @@ export function DigitalMarketingDubai() {
               Are You Seeking A Dynamic Digital Marketing Company In Dubai That Will Help You Grow Your Company? Suggestinfo Is A Full-Service Digital Marketing Agency In Dubai That Works With Companies All Around The Middle East And The United Arab Emirates. In Addition To A Wide Range Of Other Digital Marketing Services, We Also Provide SEO, Social Media Marketing, PPC, Content Marketing, Analytics, And Online AdvertsWe Deliver The Most Effective Method Of Business Promotion.We Suggestinfo Involve More Than Just Having A Website Or A Social Media Account.
             </p>
             <div className="mt-4">
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-[#3cc994] to-[#28a77b] text-white px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-[#3cc994]/30 hover:shadow-[#3cc994]/50 hover:-translate-y-1 transition-all duration-300"
-              >
-                <PhoneCall size={18} />
-                <span>Contact Us</span>
-              </a>
+              <ContactButton />
             </div>
           </div>
 
