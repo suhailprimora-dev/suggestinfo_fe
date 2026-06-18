@@ -59,7 +59,9 @@ const servicesMegaMenuData = {
       { label: 'Android App Development in India', href: '/services/india/android-app-development' },
       { label: 'IOS App Development in India', href: '/services/india/ios-app-development' }
     ],
-    'Elearning Development': []
+    'Elearning Development': [
+      { label: 'LMS Development in india', href: '/services/india/lms-development' }
+    ]
   }
 };
 

@@ -4,22 +4,23 @@ import { Code, ShieldCheck, ThumbsUp, Zap, Globe } from 'lucide-react';
 import { ContactButton } from '../../../../components/ContactButton';
 import { ContactSection } from '../../../../components/ContactSection';
 
-import heroImg from '../../../../assets/service/India/WEB DEVELOPMENT/Custom Website Development/services-main-Wp (1).png';
+import heroBg from '../../../../assets/service/UAE/digital marketing/seo service in dubai.png';
 import img1 from '../../../../assets/service/India/WEB DEVELOPMENT/Custom Website Development/Responsive-WP-Theme (1).png';
 import img2 from '../../../../assets/service/India/WEB DEVELOPMENT/Custom Website Development/Developing-Progressive-Web.png';
 import img3 from '../../../../assets/service/India/WEB DEVELOPMENT/Custom Website Development/Application-developments.png';
 import img4 from '../../../../assets/service/India/WEB DEVELOPMENT/Custom Website Development/Overall-Site (1).png';
 import img5 from '../../../../assets/service/India/WEB DEVELOPMENT/Custom Website Development/SMS-for-Healthcare.png';
 import img6 from '../../../../assets/service/India/WEB DEVELOPMENT/Custom Website Development/Theme-Customization-for-WP.png';
+import img7 from '../../../../assets/service/India/WEB DEVELOPMENT/Custom Website Development/services-main-Wp (1).png';
 
 export function CustomWebsiteDevelopmentIndia() {
   return (
-    <div className="min-h-screen bg-gray-50/50">
+    <div className="w-full">
       {/* Hero Section */}
       <section
         className="relative w-full h-[160px] md:h-[200px] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `url(${heroImg})`,
+          backgroundImage: `url(${heroBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -28,8 +29,9 @@ export function CustomWebsiteDevelopmentIndia() {
         {/* Dark overlay to ensure text remains readable against the background */}
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center px-4 w-full">
-          <h1 className="text-white text-[32px] md:text-[50px] lg:text-[56px] font-extrabold uppercase tracking-wide drop-shadow-lg m-0">
-            CUSTOM WEBSITE DEVELOPMENT
+          <div className="text-white text-sm font-semibold tracking-widest mb-2 uppercase">• SERVICES</div>
+          <h1 className="text-white text-[32px] md:text-[50px] lg:text-[56px] font-bold uppercase tracking-wide drop-shadow-lg m-0">
+            CUSTOM WEBSITE DEVELOPMENT IN INDIA
           </h1>
         </div>
       </section>

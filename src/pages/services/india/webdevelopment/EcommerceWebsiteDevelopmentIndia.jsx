@@ -1,17 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, TrendingUp, MapPin, ShieldCheck, Smartphone } from 'lucide-react';
+import { Award, Package, Truck, PieChart, Lightbulb } from 'lucide-react';
 import { ContactButton } from '../../../../components/ContactButton';
 import { ContactSection } from '../../../../components/ContactSection';
-import heroBg from '../../../../assets/service/UAE/digital marketing/seo service in dubai.png';
-import seoAuditImg from '../../../../assets/service/UAE/digital marketing/SEO-Audit-Analysis.png';
-import seoImg from '../../../../assets/service/UAE/digital marketing/SEO.png';
-import contentMarketingImg from '../../../../assets/service/UAE/digital marketing/Content-Marketing.png';
-import marketingImg from '../../../../assets/service/UAE/digital marketing/Marketing-and-Advertising.png';
-import brandingImg from '../../../../assets/service/UAE/digital marketing/Branding.png';
-import searchEngineOptimizationImg from '../../../../assets/service/UAE/digital marketing/Search-Engine-Optimization.png';
 
-export function SeoServiceIndia() {
+import heroBg from '../../../../assets/service/UAE/digital marketing/seo service in dubai.png';
+import img1 from '../../../../assets/service/India/WEB DEVELOPMENT/E-commerce Website Development in India/Shaping-Site (1).png';
+import img2 from '../../../../assets/service/India/WEB DEVELOPMENT/E-commerce Website Development in India/SMS-E-commerce.png';
+import img3 from '../../../../assets/service/India/WEB DEVELOPMENT/E-commerce Website Development in India/Rectangle-7.png';
+import img4 from '../../../../assets/service/India/WEB DEVELOPMENT/E-commerce Website Development in India/Website-development-for-E-Commerce.png';
+import img5 from '../../../../assets/service/India/WEB DEVELOPMENT/E-commerce Website Development in India/Integration-of-CRM.png';
+import img6 from '../../../../assets/service/India/WEB DEVELOPMENT/E-commerce Website Development in India/Web-Design-and-Development.png';
+
+export function EcommerceWebsiteDevelopmentIndia() {
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -28,12 +29,12 @@ export function SeoServiceIndia() {
         <div className="relative z-10 text-center px-4 w-full">
           <div className="text-white text-sm font-semibold tracking-widest mb-2 uppercase">• SERVICES</div>
           <h1 className="text-white text-[32px] md:text-[50px] lg:text-[56px] font-bold uppercase tracking-wide drop-shadow-lg m-0">
-            SEO SERVICES IN INDIA
+            E-COMMERCE WEBSITE DEVELOPMENT IN INDIA
           </h1>
         </div>
       </section>
 
-      {/* 2nd Section: Guaranteed SEO Services */}
+      {/* 2nd Section: Why Choose */}
       <section className="py-20 px-6 md:px-12 lg:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
 
@@ -44,11 +45,15 @@ export function SeoServiceIndia() {
                 why choose
               </div>
               <h2 className="text-3xl md:text-[40px] font-extrabold text-[#111827] leading-[1.2] uppercase tracking-tight">
-                DEDICATED SEO SERVICES IN CHENNAI, INDIA
+                SIGN UP WITH TOP<br />
+                SUGGESTINFO IN CHENNAI,<br />
+                INDIA TO GET TOP-NOTCH<br />
+                <span className="text-[#3cc994]">ECOMMERCE DEVELOPMENT</span><br />
+                SERVICES:
               </h2>
             </div>
             <p className="text-gray-600 text-[16px] leading-relaxed font-medium">
-              We Create A Way To Succeed For Your Brand To Pass Through The High Competition And Achieve The Top Place In The Digital Medium. The Dedicated Team Of Professional Who Can Are Experts With The Ins And Outs Of The Branding And Marketing Techniques Can Assure You To Track The Record Of The Amazing Work In The First Step To Have The Best Brand Value.
+              With The Incredible Array Of ECommerce Solutions, SuggfestInfo In Chennai, India Is A Leading Supplier Of Digital Solutions To Clients Worldwide. By Continuing To Employ The Most Cutting-Edge And Sophisticated Technology, Which Enables Us To Develop Competitive And Advanced Digital Solutions, We Tend To Boost Our Expansion To New Heights In The Following Years. To Identify The Finest E-Commerce Development Business For Your Project's Goals, Budget, And Timetable, Our E-Commerce Website Development Service Is Best.
             </p>
             <div className="mt-4">
               <ContactButton />
@@ -61,10 +66,10 @@ export function SeoServiceIndia() {
             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3cc994] to-[#28a77b]"></div>
               <div className="w-14 h-14 bg-[#e8f8f5] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3cc994] transition-colors duration-300 shadow-sm">
-                <Users className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
+                <Award className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
               </div>
               <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
-                We Work To Generate More Traffic.
+                Reputable And Trustworthy E-Commerce Website Development Company
               </p>
             </div>
 
@@ -72,10 +77,10 @@ export function SeoServiceIndia() {
             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3cc994] to-[#28a77b]"></div>
               <div className="w-14 h-14 bg-[#e8f8f5] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3cc994] transition-colors duration-300 shadow-sm">
-                <TrendingUp className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
+                <Package className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
               </div>
               <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
-                We Assist In Accelerating The Conversion Rate.
+                We Offer Effective Inventory Control
               </p>
             </div>
 
@@ -83,10 +88,10 @@ export function SeoServiceIndia() {
             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3cc994] to-[#28a77b]"></div>
               <div className="w-14 h-14 bg-[#e8f8f5] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3cc994] transition-colors duration-300 shadow-sm">
-                <MapPin className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
+                <Truck className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
               </div>
               <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
-                Our Services Encourage The Local Users To Visit The Physical Store
+                You Can Get Simple Order Tracking And Fulfilment
               </p>
             </div>
 
@@ -94,158 +99,146 @@ export function SeoServiceIndia() {
             <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3cc994] to-[#28a77b]"></div>
               <div className="w-14 h-14 bg-[#e8f8f5] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3cc994] transition-colors duration-300 shadow-sm">
-                <ShieldCheck className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
+                <PieChart className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
               </div>
               <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
-                We Built The Brand Credibility
+                We Have Personalized Business Reporting And Analytics
               </p>
             </div>
 
             {/* Card 5 */}
-            <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden md:col-span-2">
+            <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden md:col-span-2 lg:col-span-1">
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#3cc994] to-[#28a77b]"></div>
               <div className="w-14 h-14 bg-[#e8f8f5] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3cc994] transition-colors duration-300 shadow-sm">
-                <Smartphone className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
+                <Lightbulb className="text-[#3cc994] group-hover:text-white transition-colors duration-300" size={28} />
               </div>
               <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
-                We Ensure Mobile-Friendliness Of The Website
+                We Possess Both A Highly Developed Technological Brain And A Creative Self.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3rd Section: How Our SEO Services Will Help You */}
+      {/* 3rd Section: Services Grid */}
       <section className="py-20 bg-[#eef8ff]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-[40px] font-extrabold text-[#111827] uppercase tracking-wide">
-              HOW OUR SEO SERVICES WILL HELP YOU?
+              OUR EXCELLENT E-COMMERCE WEBSITE DEVELOPMENT SERVICES:
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Service Card 1 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
-              <div className="h-[210px] overflow-hidden relative">
-                <img src={seoAuditImg} alt="SEO Audit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="h-40 overflow-hidden relative rounded-b-[24px]">
+                <img src={img1} alt="B2B Merchandising" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">
-                  SEO Audit
-                </h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3">B2B Merchandising</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  From SEO Audit To On-Page SEO To Link Building, We Offer The Best SEO Services In Chennai, India To Move To The Top Google Results.
+                  We Begin Protected, Long-Lasting, And Feature-Rich B2B Marketplaces To Enable Companies To Deliver Their Goods Or Services To Other Potential Companies In The Market. We From SuggestInfo In Chennai, India Help Our Clients By Giving Them Access To Extremely Effective B2B Markets With Recurring Growth.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 2 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
-              <div className="h-[210px] overflow-hidden relative">
-                <img src={seoImg} alt="Keyword Research" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="h-40 overflow-hidden relative rounded-b-[24px]">
+                <img src={img2} alt="Platforms For B2C Ecommerce" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">
-                  Keyword Research
-                </h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3 leading-snug">Platforms For B2C Ecommerce</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  If Your Website Wants To Rank At The Top Pages, The Role Of Keywords Is Crucial. We Work On The Parameters And Bring The Website To The Top Position.
+                  We Offer Feature-Rich, Interactive Web Portals That Allow Any Company To Engage In Direct Client Contact For Growth. We Give These Websites More Power By Incorporating Cutting-Edge ECommerce Features That Boost Their Effectiveness And Productivity.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 3 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
-              <div className="h-[210px] overflow-hidden relative">
-                <img src={contentMarketingImg} alt="Content Strategy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="h-40 overflow-hidden relative rounded-b-[24px]">
+                <img src={img3} alt="Upgrade and Migration" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">
-                  Content Strategy
-                </h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3">Upgrade and Migration</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  We Follow The Best Content Marketing Services To Help Your Brand Establish Trust, Thought And Authority Leadership When Engaging With The Targeted Audience
+                  Using Cutting-Edge Technology, We Assist Businesses In Upgrading From Outdated Web Portals To Effective, Capable, Feature-Packed, Configurable, And More Secure ECommerce Platforms That Can Meet The Needs Of All Enterprises, Regardless Of Their Sizes Or Industry Domains.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 4 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
-              <div className="h-[210px] overflow-hidden relative">
-                <img src={marketingImg} alt="Social Media Integration" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="h-40 overflow-hidden relative rounded-b-[24px]">
+                <img src={img4} alt="Ecommerce Audit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">
-                  Social Media Integration
-                </h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3">Ecommerce Audit</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  Having An Online Presence In Social Is More Important When It Comes To Business In The Internet Dominated World. Our Team In Chennai, India Takes Care Of The Social Media Presence And Growth.
+                  We Examine E-Commerce Websites And Infrastructure For Bugs In The Code, Security Holes, Performance Problems, And User Experience Problems. Then, After Identifying Issues, We Prioritize And Prepare Remedies.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 5 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
-              <div className="h-[210px] overflow-hidden relative">
-                <img src={brandingImg} alt="Online Reputation Management" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="h-40 overflow-hidden relative rounded-b-[24px]">
+                <img src={img5} alt="Integrations with Ecommerce" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3 leading-snug">
-                  Online Reputation Management
-                </h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3 leading-snug">Integrations with Ecommerce</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  Your Reputation Builds Your Brand. So, We Have The Experts Who Are The Best In Monitoring, Protecting And Building The Online Reputation In Chennai, India.
+                  With API-Based Integration Services To Link Dissimilar Systems And Enable Automated Data Exchange, We Bolster Our Competence In Establishing Online Stores.
                 </p>
               </div>
             </motion.div>
 
             {/* Service Card 6 */}
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
               className="bg-white rounded-[24px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.2)] transition-all duration-300 group"
             >
-              <div className="h-[210px] overflow-hidden relative">
-                <img src={searchEngineOptimizationImg} alt="Real Time Data" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="h-40 overflow-hidden relative rounded-b-[24px]">
+                <img src={img6} alt="Development of Custom Modules and Plugins" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-6 pt-5">
-                <h3 className="text-[24px] font-bold text-[#111827] mb-3">
-                  Real Time Data
-                </h3>
+                <h3 className="text-[24px] font-bold text-[#111827] mb-3 leading-snug">Development of Custom Modules and Plugins</h3>
                 <p className="text-gray-600 text-[13px] leading-relaxed font-medium">
-                  SEO Are Not The Factor To Achieve Overnight. We Will Be More Cautious With The Real-Time Data To Make It More Helpful For Making The Website At The Top Position Constantly.
+                  By Developing The Appropriate Set Of Modules And Plugins In Accordance With Your Project Specifications, We Help You Improve The Features And Functionalities Of Your Online Shop And Advance Your ECommerce Venture.
                 </p>
               </div>
             </motion.div>
@@ -253,12 +246,12 @@ export function SeoServiceIndia() {
         </div>
       </section>
 
-      {/* 4th Section: Why Choose Us? */}
+      {/* 4th Section: Benefits of Choosing Us */}
       <section className="py-20 relative overflow-hidden">
         <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-[40px] font-extrabold text-[#000000] uppercase tracking-wide leading-tight">
-              WHY CHOOSE US?
+              WHAT MAKES US UNIQUE FROM OTHERS?
             </h2>
           </div>
 
@@ -268,58 +261,58 @@ export function SeoServiceIndia() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 relative z-10">
               {/* Card 1 */}
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
                 className="bg-gradient-to-br from-[#f8faff] to-[#e2ecfa] p-6 md:p-8 rounded-[28px]"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Delivering Business Growth</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Excellent Customer Service</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  We consistently deliver transformational growth to all our clients through our excellent SEO practice. We also promise to deliver good traffic with intense techniques.
+                  You may effortlessly manage your customer interactions with the eCommerce platform. You may create personalized promotional offers and easily resolve pre- and post-sale difficulties.
                 </p>
               </motion.div>
 
               {/* Card 2 */}
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
                 className="bg-gradient-to-br from-[#fff2ef] to-[#fce4de] p-6 md:p-8 rounded-[28px]"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Expertise In Each Vertical</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Order Control</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  We have a dedicated team who can work for the SEO in all the categories like expertise SEO, eCommerce SEO, etc. So, we serve as the one-stop destination for SEO needs.
+                  The functions of the solution will make managing orders for you simpler. The platform will include all the capabilities necessary to speed up the workflow, from order fulfilment to personalizing specifics.
                 </p>
               </motion.div>
 
               {/* Card 3 */}
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
                 className="bg-gradient-to-br from-[#f1fcfb] to-[#e2f5f1] p-6 md:p-8 rounded-[28px]"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Transparent And Measurable</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Category Control</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  We periodically publish the report card on the marketing experience and analyze the grow the technique. We also implement the necessary strategies periodically for better results.
+                  Get the most user-friendly interface for organizing categories on both the front and back ends. Users will be able to explore with ease, while administrators can easily manage types.
                 </p>
               </motion.div>
 
               {/* Card 4 */}
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
                 className="bg-gradient-to-br from-[#f9f7fc] to-[#efe9f8] p-6 md:p-8 rounded-[28px]"
               >
-                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Service Based On The Latest Technology</h3>
+                <h3 className="text-[22px] lg:text-[24px] font-bold text-[#000000] mb-3">Individual Recommendation</h3>
                 <p className="text-gray-800 text-[15px] leading-relaxed font-medium">
-                  We are always updated with the technology, and we manage all the campaigns with our own proprietary tools and ensure the best service.
+                  By giving your eCommerce solution the personalization UI tools and recommendation engines needs to provide the best possible customer experience, you can transform it into a next-generation offering.
                 </p>
               </motion.div>
             </div>
@@ -328,12 +321,10 @@ export function SeoServiceIndia() {
       </section>
 
       {/* 5th Section: Contact Form */}
-      <ContactSection
-        title={<>Get Quote For Search<br />Engine Optimization</>}
+      <ContactSection 
+        title={<>Get Quote For E-Commerce<br />Website Development</>}
         subtitle="Call us for fast support to this number."
       />
     </div>
   );
 }
-
-export default SeoServiceIndia;

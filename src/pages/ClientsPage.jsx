@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-import woofbykulfiImg from '../assets/woofbykulfi-500x400.png (1).png';
-import project1Img from '../assets/Project-1-1.png';
-import project2Img from '../assets/Project-2-1.png';
-import project3Img from '../assets/Project-3-1.png';
-import project4Img from '../assets/Project-4-1.png';
-
 // Eager load all Overlay+Shadow PNG card assets dynamically
 const imageModules = import.meta.glob('../assets/Overlay+Shadow*.png', { eager: true });
 
@@ -188,7 +182,6 @@ const projects = [
   {
     name: 'Woofbykulfi',
     categories: ['Website'],
-    img: woofbykulfiImg,
   },
   {
     name: 'Moderndude',
@@ -210,22 +203,18 @@ const projects = [
 const recentProjects = [
   {
     name: 'Naffco',
-    img: project1Img,
     description: 'We recently completed a project on NAFFCO, a leading supplier of firefighting equipment and safety solutions. we analyzed their products, strategies, and innovations, highlighting their safety standards, R&D commitment, and market expansion, revealing how NAFFCO stays competitive.',
   },
   {
     name: 'Learning Management System(LMS)',
-    img: project2Img,
     description: 'We recently developed a Learning Management System (LMS) for the Maharashtra State Pharmacy Council to streamline continuing education for pharmacists. The user-friendly platform includes course management, online assessments, and certification tracking, enhancing professional development efficiency and accessibility.',
   },
   {
     name: '5tech',
-    img: project3Img,
     description: 'We recently started SEO process for 5Tech Services Engineering, aimed at improving their online visibility and search engine rankings. The project involved keyword optimization, content creation, and technical SEO enhancements, resulting in increased web traffic and better lead generation.',
   },
   {
     name: 'King chartering',
-    img: project4Img,
     description: 'We recently completed a social media optimization project for King Chartering. The project focused on enhancing their online presence by optimizing content, increasing engagement, and growing their follower base across various social media platforms. This resulted in improved brand visibility and customer interaction.',
   },
 ];
@@ -301,12 +290,16 @@ export function ClientsPage() {
                   className="flex flex-col group cursor-pointer"
                 >
                   {/* Card Logo Box */}
-                  <div className="w-full transition-all duration-300">
-                    <img
-                      src={proj.img || getClientImage(proj.imgIndex)}
-                      alt={proj.name}
-                      className="w-full h-auto object-contain block"
-                    />
+                  <div className="w-full transition-all duration-300 aspect-[1.3] bg-slate-50 flex items-center justify-center rounded-xl overflow-hidden mb-2">
+                    {proj.img || getClientImage(proj.imgIndex) ? (
+                      <img
+                        src={proj.img || getClientImage(proj.imgIndex)}
+                        alt={proj.name}
+                        className="w-full h-full object-contain block"
+                      />
+                    ) : (
+                      <span className="text-slate-400 font-medium text-sm">Image Space</span>
+                    )}
                   </div>
                   
                   {/* Card Labels */}
@@ -348,12 +341,16 @@ export function ClientsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
           {recentProjects.map((proj) => (
             <div key={proj.name} className="flex flex-col group">
-              <div className="w-full rounded-[24px] overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_55px_rgba(0,0,0,0.12)] transition-shadow duration-300">
-                <img
-                  src={proj.img}
-                  alt={proj.name}
-                  className="w-full h-auto object-cover aspect-[1.6/1]"
-                />
+              <div className="w-full rounded-[24px] overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_55px_rgba(0,0,0,0.12)] transition-shadow duration-300 aspect-[1.6/1] bg-slate-100 flex items-center justify-center">
+                {proj.img ? (
+                  <img
+                    src={proj.img}
+                    alt={proj.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="text-slate-400 font-medium text-lg">Empty Space for Image</span>
+                )}
               </div>
               <h3 className="text-[28px] font-bold text-[#0da687] mt-8 mb-3 leading-tight hover:text-[#f97316] transition-colors duration-200">
                 {proj.name}

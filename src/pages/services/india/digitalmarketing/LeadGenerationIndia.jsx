@@ -16,7 +16,7 @@ export function LeadGenerationIndia() {
       <section className="relative w-full py-14 md:py-18 flex items-center justify-center bg-gradient-to-r from-[#e0fff4] to-[#ccffea]">
         <div className="relative z-10 text-center px-4 w-full">
           <div className="text-gray-600 text-sm font-semibold tracking-widest mb-2 uppercase">• SERVICES</div>
-          <h1 className="text-[#111827] text-[32px] md:text-[45px] lg:text-[50px] font-extrabold uppercase tracking-wide m-0">
+          <h1 className="text-[#111827] text-[32px] md:text-[45px] lg:text-[50px] font-bold uppercase tracking-wide m-0">
             LEAD GENERATION (PAY PER LEAD SERVICES)
           </h1>
         </div>

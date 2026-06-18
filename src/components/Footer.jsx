@@ -99,7 +99,14 @@ export function Footer() {
                 { label: 'Terms of Service', href: '/terms' }
               ].map(item => (
                 <li key={item.label}>
-                  <a href={item.href} className="text-[15px] text-slate-300 hover:text-[#3cc994] transition-colors font-medium">
+                  <a 
+                    href={item.href} 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(item.href);
+                    }}
+                    className="text-[15px] text-slate-300 hover:text-[#3cc994] transition-colors font-medium"
+                  >
                     {item.label}
                   </a>
                 </li>

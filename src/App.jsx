@@ -1,5 +1,6 @@
 import { Router, Route } from './router';
 import { Header } from './components/Header';
+import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ClientsPage } from './pages/ClientsPage';
 import { SeoServiceDubai } from './pages/services/uae/SeoServiceDubai';
@@ -21,6 +22,15 @@ import { SocialMediaMarketingIndia } from './pages/services/india/digitalmarketi
 import { SmsMarketingIndia } from './pages/services/india/digitalmarketing/SmsMarketingIndia';
 import { LeadGenerationIndia } from './pages/services/india/digitalmarketing/LeadGenerationIndia';
 import { CustomWebsiteDevelopmentIndia } from './pages/services/india/webdevelopment/CustomWebsiteDevelopmentIndia';
+import { WordPressCmsDevelopmentIndia } from './pages/services/india/webdevelopment/WordPressCmsDevelopmentIndia';
+import { EcommerceWebsiteDevelopmentIndia } from './pages/services/india/webdevelopment/EcommerceWebsiteDevelopmentIndia';
+import { WebsiteMaintenanceAndServicesIndia } from './pages/services/india/webdevelopment/WebsiteMaintenanceAndServicesIndia';
+import { BrandKitIndia } from './pages/services/india/webdevelopment/BrandKitIndia';
+import { LearningManagementSystemIndia } from './pages/services/india/elearningdevelopment/LearningManagementSystemIndia';
+import { AndroidAppDevelopmentIndia } from './pages/services/india/mobileappdevelopment/AndroidAppDevelopmentIndia';
+import { IosAppDevelopmentIndia } from './pages/services/india/mobileappdevelopment/IosAppDevelopmentIndia';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsOfService } from './pages/TermsOfService';
 
 export default function App() {
   return (
@@ -28,7 +38,7 @@ export default function App() {
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
-          <Route path="/" component={AboutPage} />
+          <Route path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/about-us" component={AboutPage} />
           <Route path="/clients" component={ClientsPage} />
@@ -56,6 +66,15 @@ export default function App() {
           <Route path="/services/india/sms-marketing" component={SmsMarketingIndia} />
           <Route path="/services/india/lead-generation" component={LeadGenerationIndia} />
           <Route path="/services/india/custom-website-development" component={CustomWebsiteDevelopmentIndia} />
+          <Route path="/services/india/wordpress-development" component={WordPressCmsDevelopmentIndia} />
+          <Route path="/services/india/ecommerce-development" component={EcommerceWebsiteDevelopmentIndia} />
+          <Route path="/services/india/website-maintenance" component={WebsiteMaintenanceAndServicesIndia} />
+          <Route path="/services/india/brand-kit" component={BrandKitIndia} />
+          <Route path="/services/india/lms-development" component={LearningManagementSystemIndia} />
+          <Route path="/services/india/android-app-development" component={AndroidAppDevelopmentIndia} />
+          <Route path="/services/india/ios-app-development" component={IosAppDevelopmentIndia} />
+          <Route path="/privacy" component={PrivacyPolicy} />
+          <Route path="/terms" component={TermsOfService} />
         </main>
         <Footer />
       </div>
