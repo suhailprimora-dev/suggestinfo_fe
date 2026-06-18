@@ -61,7 +61,7 @@ export default function App() {
           <Route path="/services/content-writing-dubai" component={ContentWritingDubai} />
           <Route path="/services/translation-dubai" component={TranslationDubai} />
           
-          <Route path="/services/india/seo" component={SeoServiceIndia} />
+          <Route path="/services/india/seo-services" component={SeoServiceIndia} />
           <Route path="/services/india/social-media-marketing" component={SocialMediaMarketingIndia} />
           <Route path="/services/india/sms-marketing" component={SmsMarketingIndia} />
           <Route path="/services/india/lead-generation" component={LeadGenerationIndia} />

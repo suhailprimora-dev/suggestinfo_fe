@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ChevronDown, Menu, X, Phone, ChevronRight } from 'lucide-react';
 import logo from '../assets/service/UAE/WEB DEVELOPMENT/logo-02.png';
 import { useRouter } from '../router';
+import { ConsultationFormPopup } from './ConsultationFormPopup';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -73,12 +74,13 @@ export function Header() {
 
   const [activeCountry, setActiveCountry] = useState('UAE');
   const [activeCategory, setActiveCategory] = useState('Digital Marketing');
+  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
 
   return (
     <header className="w-full z-50 relative shadow-[0_8px_30px_rgba(0,0,0,0.16)]">
       <div style={{ backgroundColor: '#0a2e2c' }} className="shadow-md">
         {/* Nav row — min-h forces the bar to be taller; logo fills it top-to-bottom */}
-        <div className="w-full px-6 md:px-12 lg:px-16 flex items-stretch" style={{ minHeight: '110px' }}>
+        <div className="w-full px-6 md:px-12 lg:px-16 flex items-stretch" style={{ minHeight: '115px' }}>
 
           {/* Logo — far LEFT */}
           <a
@@ -92,8 +94,8 @@ export function Header() {
             <img
               src={logo}
               alt="suggestinfo logo"
-              className="h-full max-h-24 w-auto object-contain"
-              style={{ minHeight: '80px' }}
+              className="h-full max-h-28 w-auto object-contain"
+              style={{ minHeight: '85px' }}
             />
           </a>
 
@@ -109,16 +111,16 @@ export function Header() {
                       }
                     }}
                     className={`flex items-center gap-1.5 text-[17px] font-semibold transition-colors py-1 cursor-pointer ${(item.label === 'Software' && currentPath.startsWith('/software')) ||
-                        (item.label === 'Services' && currentPath.startsWith('/services')) ||
-                        (item.label === 'Our Clients' && currentPath.startsWith('/clients'))
-                        ? 'text-white border-b-2 border-[#3cc994] pb-0'
-                        : 'text-slate-200 hover:text-white'
+                      (item.label === 'Services' && currentPath.startsWith('/services')) ||
+                      (item.label === 'Our Clients' && currentPath.startsWith('/clients'))
+                      ? 'text-white border-b-2 border-[#3cc994] pb-0'
+                      : 'text-slate-200 hover:text-white'
                       }`}
                   >
                     {item.label}
                     <ChevronDown size={16} className="opacity-70 ml-0.5" />
                   </button>
-                  <ul 
+                  <ul
                     className="nav-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded shadow-xl min-w-[150px] py-2 z-50 border border-slate-100"
                     style={{ display: forceClose ? 'none' : '' }}
                   >
@@ -130,7 +132,7 @@ export function Header() {
                           {country}
                           <ChevronRight size={16} />
                         </button>
-                        
+
                         {/* Nested Categories Dropdown */}
                         <ul className="absolute top-0 left-full hidden group-hover/country:block bg-white rounded shadow-xl min-w-[260px] py-2 border border-slate-100">
                           {Object.keys(servicesMegaMenuData[country]).map((cat) => {
@@ -148,11 +150,10 @@ export function Header() {
                                       setTimeout(() => setForceClose(false), 200);
                                       navigate(catLinks[0].href);
                                     }}
-                                    className={`w-full flex items-center justify-between px-5 py-2.5 text-[15px] transition-colors group-hover/cat:bg-[#3f444c] group-hover/cat:text-white ${
-                                      currentPath === catLinks[0].href
+                                    className={`w-full flex items-center justify-between px-5 py-2.5 text-[15px] transition-colors group-hover/cat:bg-[#3f444c] group-hover/cat:text-white ${currentPath === catLinks[0].href
                                         ? 'text-[#3cc994] bg-slate-50'
                                         : 'text-slate-700 bg-white'
-                                    }`}
+                                      }`}
                                   >
                                     {cat}
                                   </a>
@@ -164,7 +165,7 @@ export function Header() {
                                       {cat}
                                       <ChevronRight size={16} />
                                     </button>
-                                    
+
                                     {/* Nested Links Dropdown */}
                                     <ul className="absolute top-0 left-full hidden group-hover/cat:block bg-white rounded shadow-xl min-w-[340px] py-2 border border-slate-100">
                                       {catLinks?.length > 0 ? (
@@ -178,11 +179,10 @@ export function Header() {
                                                 setTimeout(() => setForceClose(false), 200);
                                                 navigate(link.href);
                                               }}
-                                              className={`block px-5 py-2.5 text-[15px] font-medium transition-colors ${
-                                                currentPath === link.href
+                                              className={`block px-5 py-2.5 text-[15px] font-medium transition-colors ${currentPath === link.href
                                                   ? 'text-[#3cc994] bg-[#e8f8f5]'
                                                   : 'text-slate-600 hover:text-[#3cc994] hover:bg-[#e8f8f5]'
-                                              }`}
+                                                }`}
                                             >
                                               {link.label}
                                             </a>
@@ -213,8 +213,8 @@ export function Header() {
                     navigate(item.href);
                   }}
                   className={`text-[17px] font-semibold py-1 transition-colors ${currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
-                      ? 'text-white border-b-2 border-[#3cc994] pb-0'
-                      : 'text-slate-200 hover:text-white'
+                    ? 'text-white border-b-2 border-[#3cc994] pb-0'
+                    : 'text-slate-200 hover:text-white'
                     }`}
                 >
                   {item.label}
@@ -224,19 +224,23 @@ export function Header() {
           </nav>
 
           {/* Phone numbers — far RIGHT */}
-          <div className="hidden lg:flex flex-col justify-center gap-1 text-right flex-shrink-0 ml-10">
+          <div className="hidden lg:flex flex-col justify-center gap-1.5 text-right flex-shrink-0 ml-10">
             <a
               href="tel:+971524828215"
-              className="flex items-center justify-end gap-2 text-[16px] font-semibold text-slate-200 hover:text-[#3cc994] transition-colors"
+              className="flex items-center justify-end gap-2 text-[17px] font-medium text-slate-100 hover:text-[#3cc994] transition-colors tracking-wide group"
             >
-              <Phone size={16} className="text-[#3cc994]" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-[16px] h-[16px] fill-white group-hover:fill-[#3cc994] transition-colors">
+                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+              </svg>
               <span>UAE +971 52 482 8215</span>
             </a>
             <a
               href="tel:+917339131492"
-              className="flex items-center justify-end gap-2 text-[16px] font-semibold text-slate-200 hover:text-[#3cc994] transition-colors"
+              className="flex items-center justify-end gap-2 text-[17px] font-medium text-slate-100 hover:text-[#3cc994] transition-colors tracking-wide group"
             >
-              <Phone size={16} className="text-[#3cc994]" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-[16px] h-[16px] fill-white group-hover:fill-[#3cc994] transition-colors">
+                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+              </svg>
               <span>IND +91 73391 31492</span>
             </a>
           </div>
@@ -280,10 +284,10 @@ export function Header() {
                       <button
                         onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
                         className={`w-full flex justify-between items-center text-[15px] font-semibold py-2.5 px-2 hover:text-white transition-colors ${(item.label === 'Software' && currentPath.startsWith('/software')) ||
-                            (item.label === 'Services' && currentPath.startsWith('/services')) ||
-                            (item.label === 'Our Clients' && currentPath.startsWith('/clients'))
-                            ? 'text-white bg-white/10 rounded-md font-bold'
-                            : 'text-slate-300'
+                          (item.label === 'Services' && currentPath.startsWith('/services')) ||
+                          (item.label === 'Our Clients' && currentPath.startsWith('/clients'))
+                          ? 'text-white bg-white/10 rounded-md font-bold'
+                          : 'text-slate-300'
                           }`}
                       >
                         {item.label}
@@ -296,8 +300,8 @@ export function Header() {
                               <a
                                 href={c.href}
                                 className={`block text-[14px] py-2 px-2 transition-colors ${currentPath === c.href
-                                    ? 'text-white font-bold'
-                                    : 'text-slate-400 hover:text-white'
+                                  ? 'text-white font-bold'
+                                  : 'text-slate-400 hover:text-white'
                                   }`}
                                 onClick={(e) => {
                                   e.preventDefault();
@@ -317,8 +321,8 @@ export function Header() {
                       <a
                         href={item.href}
                         className={`block text-[15px] font-semibold py-2.5 px-2 transition-colors ${currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
-                            ? 'text-white bg-white/10 rounded-md font-bold'
-                            : 'text-slate-300 hover:text-white'
+                          ? 'text-white bg-white/10 rounded-md font-bold'
+                          : 'text-slate-300 hover:text-white'
                           }`}
                         onClick={(e) => {
                           e.preventDefault();
@@ -344,6 +348,11 @@ export function Header() {
           </div>
         </>
       )}
+
+      <ConsultationFormPopup
+        isOpen={isConsultationOpen}
+        onClose={() => setIsConsultationOpen(false)}
+      />
     </header>
   );
 }

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
 import { ContactForm } from './ContactForm';
+import { ConsultationFormPopup } from './ConsultationFormPopup';
 
 export function ContactSection({ title, subtitle }) {
+  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
+
   return (
     <section className="py-24 relative overflow-hidden bg-white">
       <div className="w-full max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row items-center gap-16 lg:gap-24">
@@ -37,13 +40,21 @@ export function ContactSection({ title, subtitle }) {
               IND: +91 73391 31492
             </a>
             <div className="mt-2">
-              <button className="bg-[#8b5cf6] hover:bg-[#7c3aed] text-white px-8 py-3.5 rounded-md text-[16px] font-medium transition-colors shadow-sm cursor-pointer">
+              <button 
+                onClick={() => setIsConsultationOpen(true)}
+                className="bg-[#8b5cf6] hover:bg-[#7c3aed] text-white px-8 py-3.5 rounded-md text-[16px] font-medium transition-colors shadow-sm cursor-pointer"
+              >
                 Enquire Now
               </button>
             </div>
           </div>
         </div>
       </div>
+
+      <ConsultationFormPopup 
+        isOpen={isConsultationOpen} 
+        onClose={() => setIsConsultationOpen(false)} 
+      />
     </section>
   );
 }
