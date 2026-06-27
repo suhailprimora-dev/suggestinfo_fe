@@ -6,62 +6,62 @@ import { ConsultationFormPopup } from './ConsultationFormPopup';
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about', active: true },
+  { label: 'About Us', href: '/about/', active: true },
   { label: 'Services', isMegaMenu: true },
-  { label: 'Software', href: '/software' },
-  { label: 'Our Clients', href: '/clients' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contacts', href: '/contact' },
+  { label: 'Software', href: '/software/' },
+  { label: 'Our Clients', href: '/clients/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Contacts', href: '/contact/' },
 ];
 
 const servicesMegaMenuData = {
   UAE: {
     'Digital Marketing': [
-      { label: 'SEO Services In Dubai', href: '/services/seo-dubai' },
-      { label: 'Digital Marketing In Dubai', href: '/services/digital-marketing-dubai' },
+      { label: 'SEO Services In Dubai', href: '/services/seo-dubai/' },
+      { label: 'Digital Marketing In Dubai', href: '/services/digital-marketing-dubai/' },
     ],
     'Web Development': [
-      { label: 'Web Development In Dubai', href: '/services/web-development-dubai' },
-      { label: 'E-commerce websites Development in Dubai', href: '/services/ecommerce-dubai' },
-      { label: 'Brand Kit for Dubai UAE', href: '/services/brand-kit-dubai' },
+      { label: 'Web Development In Dubai', href: '/services/web-development-dubai/' },
+      { label: 'E-commerce websites Development in Dubai', href: '/services/ecommerce-dubai/' },
+      { label: 'Brand Kit for Dubai UAE', href: '/services/brand-kit-dubai/' },
     ],
     'Elearning Development': [
-      { label: 'LMS development Services in Dubai', href: '/services/lms-dubai' },
-      { label: 'Moodle Development Services In Dubai', href: '/services/moodle-dubai' },
+      { label: 'LMS development Services in Dubai', href: '/services/lms-dubai/' },
+      { label: 'Moodle Development Services In Dubai', href: '/services/moodle-dubai/' },
     ],
     'Mobile App Development': [
-      { label: 'Mobile App Development in Dubai', href: '/services/mobile-app-dubai' }
+      { label: 'Mobile App Development in Dubai', href: '/services/mobile-app-dubai/' }
     ],
     'Public Relations Services': [
-      { label: 'PR Services in Dubai', href: '/services/public-relations-dubai' }
+      { label: 'PR Services in Dubai', href: '/services/public-relations-dubai/' }
     ],
     'Content Writing Services': [
-      { label: 'Content Writing in Dubai', href: '/services/content-writing-dubai' }
+      { label: 'Content Writing in Dubai', href: '/services/content-writing-dubai/' }
     ],
     'Translation Services': [
-      { label: 'Translation Services in Dubai', href: '/services/translation-dubai' }
+      { label: 'Translation Services in Dubai', href: '/services/translation-dubai/' }
     ],
   },
   India: {
     'Digital Marketing': [
-      { label: 'SEO Services in India', href: '/services/india/seo-services' },
-      { label: 'Social Media Marketing Services in India', href: '/services/india/social-media-marketing' },
-      { label: 'SMS Marketing & Database Services in India', href: '/services/india/sms-marketing' },
-      { label: 'Lead Generation (Pay Per Lead Services)', href: '/services/india/lead-generation' }
+      { label: 'SEO Services in India', href: '/services/india/seo-services/' },
+      { label: 'Social Media Marketing Services in India', href: '/services/india/social-media-marketing/' },
+      { label: 'SMS Marketing & Database Services in India', href: '/services/india/sms-marketing/' },
+      { label: 'Lead Generation (Pay Per Lead Services)', href: '/services/india/lead-generation/' }
     ],
     'Web Development': [
-      { label: 'Custom Website Development in India', href: '/services/india/custom-website-development' },
-      { label: 'WordPress CMS Development in India', href: '/services/india/wordpress-development' },
-      { label: 'E-commerce Website Development in India', href: '/services/india/ecommerce-development' },
-      { label: 'Website Maintenance and Services in India', href: '/services/india/website-maintenance' },
-      { label: 'Brand Kit for Chennai', href: '/services/india/brand-kit' }
+      { label: 'Custom Website Development in India', href: '/services/india/custom-website-development/' },
+      { label: 'WordPress CMS Development in India', href: '/services/india/wordpress-development/' },
+      { label: 'E-commerce Website Development in India', href: '/services/india/ecommerce-development/' },
+      { label: 'Website Maintenance and Services in India', href: '/services/india/website-maintenance/' },
+      { label: 'Brand Kit for Chennai', href: '/services/india/brand-kit/' }
     ],
     'Mobile App Development': [
-      { label: 'Android App Development in India', href: '/services/india/android-app-development' },
-      { label: 'IOS App Development in India', href: '/services/india/ios-app-development' }
+      { label: 'Android App Development in India', href: '/services/india/android-app-development/' },
+      { label: 'IOS App Development in India', href: '/services/india/ios-app-development/' }
     ],
     'Elearning Development': [
-      { label: 'LMS Development in india', href: '/services/india/lms-development' }
+      { label: 'LMS Development in india', href: '/services/india/lms-development/' }
     ]
   }
 };
@@ -105,12 +105,7 @@ export function Header() {
               item.isMegaMenu ? (
                 <div key={item.label} className="dropdown-parent relative" onMouseLeave={() => { setActiveCountry('UAE'); setActiveCategory('Digital Marketing'); }}>
                   <button
-                    onClick={() => {
-                      if (item.label === 'Services') {
-                        navigate('/services');
-                      }
-                    }}
-                    className={`flex items-center gap-1.5 text-[17px] font-semibold transition-colors py-1 cursor-pointer ${(item.label === 'Software' && currentPath.startsWith('/software')) ||
+                    className={`flex items-center gap-1.5 text-[17px] font-normal transition-colors py-1 cursor-pointer ${(item.label === 'Software' && currentPath.startsWith('/software')) ||
                       (item.label === 'Services' && currentPath.startsWith('/services')) ||
                       (item.label === 'Our Clients' && currentPath.startsWith('/clients'))
                       ? 'text-white border-b-2 border-[#3cc994] pb-0'
@@ -212,7 +207,7 @@ export function Header() {
                     e.preventDefault();
                     navigate(item.href);
                   }}
-                  className={`text-[17px] font-semibold py-1 transition-colors ${currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
+                  className={`text-[17px] font-normal py-1 transition-colors ${currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
                     ? 'text-white border-b-2 border-[#3cc994] pb-0'
                     : 'text-slate-200 hover:text-white'
                     }`}
@@ -283,7 +278,7 @@ export function Header() {
                     <li key={item.label}>
                       <button
                         onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
-                        className={`w-full flex justify-between items-center text-[15px] font-semibold py-2.5 px-2 hover:text-white transition-colors ${(item.label === 'Software' && currentPath.startsWith('/software')) ||
+                        className={`w-full flex justify-between items-center text-[15px] font-normal py-2.5 px-2 hover:text-white transition-colors ${(item.label === 'Software' && currentPath.startsWith('/software')) ||
                           (item.label === 'Services' && currentPath.startsWith('/services')) ||
                           (item.label === 'Our Clients' && currentPath.startsWith('/clients'))
                           ? 'text-white bg-white/10 rounded-md font-bold'
@@ -320,7 +315,7 @@ export function Header() {
                     <li key={item.label}>
                       <a
                         href={item.href}
-                        className={`block text-[15px] font-semibold py-2.5 px-2 transition-colors ${currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
+                        className={`block text-[15px] font-normal py-2.5 px-2 transition-colors ${currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
                           ? 'text-white bg-white/10 rounded-md font-bold'
                           : 'text-slate-300 hover:text-white'
                           }`}

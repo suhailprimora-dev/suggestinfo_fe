@@ -2,12 +2,23 @@ import { useState, useEffect, createContext, useContext } from 'react';
 
 const RouterContext = createContext(null);
 
+const BASE_PATH = '/demo';
+
+function getPath() {
+  const path = window.location.pathname;
+  if (path.startsWith(BASE_PATH)) {
+    const stripped = path.slice(BASE_PATH.length);
+    return stripped === '' ? '/' : stripped;
+  }
+  return path;
+}
+
 export function Router({ children }) {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  const [currentPath, setCurrentPath] = useState(getPath());
 
   useEffect(() => {
     const handleLocationChange = () => {
-      setCurrentPath(window.location.pathname);
+      setCurrentPath(getPath());
     };
 
     // Listen to browser back/forward navigation
@@ -18,8 +29,9 @@ export function Router({ children }) {
   }, []);
 
   const navigate = (to) => {
-    if (window.location.pathname !== to) {
-      window.history.pushState({}, '', to);
+    const fullPath = BASE_PATH + (to === '/' ? '' : to);
+    if (window.location.pathname !== fullPath) {
+      window.history.pushState({}, '', fullPath);
       setCurrentPath(to);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }

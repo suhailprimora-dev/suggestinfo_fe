@@ -52,7 +52,7 @@ export function Footer() {
               href="/"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/about');
+                navigate('/about/');
               }}
             >
               <img src={logo} alt="suggestinfo" className="h-32 md:h-[135px] w-auto object-contain max-w-full" />
@@ -64,10 +64,10 @@ export function Footer() {
             <h4 className="text-[17px] font-bold text-white mb-6 tracking-wide">About</h4>
             <ul className="flex flex-col gap-3.5">
               {[
-                { label: 'About us', href: '/about' },
-                { label: 'Services', href: '/services' },
-                { label: 'Blog', href: '/blog' },
-                { label: 'Contact Us', href: '/contact' }
+                { label: 'About us', href: '/about/' },
+                { label: 'Services', href: '/services/' },
+                { label: 'Blog', href: '/blog/' },
+                { label: 'Contact Us', href: '/contact/' }
               ].map(item => (
                 <li key={item.label}>
                   <a
@@ -75,10 +75,12 @@ export function Footer() {
                     onClick={(e) => {
                       if (item.label === 'Contact Us') {
                         e.preventDefault();
-                        navigate('/contact');
+                        navigate('/contact/');
                       } else if (item.label === 'About us') {
                         e.preventDefault();
-                        navigate('/about');
+                        navigate('/about/');
+                      } else if (item.label === 'Services') {
+                        e.preventDefault();
                       }
                     }}
                     className="text-[15px] text-slate-300 hover:text-[#3cc994] transition-colors font-medium"
@@ -95,8 +97,8 @@ export function Footer() {
             <h4 className="text-[17px] font-bold text-white mb-6 tracking-wide">Company</h4>
             <ul className="flex flex-col gap-3.5">
               {[
-                { label: 'Privacy Policy', href: '/privacy' },
-                { label: 'Terms of Service', href: '/terms' }
+                { label: 'Privacy Policy', href: '/privacy/' },
+                { label: 'Terms of Service', href: '/terms/' }
               ].map(item => (
                 <li key={item.label}>
                   <a 

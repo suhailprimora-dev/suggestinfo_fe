@@ -1,8 +1,21 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, User, Briefcase, MessageSquare, Phone, Mail, MapPin } from 'lucide-react';
+import { useContact } from '../context/ContactContext';
+import * as yup from 'yup';
+import { toast } from 'react-toastify';
+
+const contactSchema = yup.object().shape({
+  name: yup.string().required('Name is required').min(2, 'Name must be at least 2 characters'),
+  email: yup.string().required('Email is required').email('Please enter a valid email address'),
+  phone: yup.string().required('Phone number is required').min(5, 'Phone number must be at least 5 characters long'),
+  city: yup.string().required('City is required'),
+  company: yup.string().optional(),
+  service: yup.string().optional(),
+});
 
 export function ContactForm() {
+  const { loading, submitContactInquiry } = useContact();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,21 +24,52 @@ export function ContactForm() {
     company: '',
     service: ''
   });
+  const [formErrors, setFormErrors] = useState({});
   const [recaptchaChecked, setRecaptchaChecked] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormErrors({});
+    
     if (!recaptchaChecked) {
-      alert("Please check the reCAPTCHA box.");
+      toast.warning("Please check the reCAPTCHA box.");
       return;
     }
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setRecaptchaChecked(false);
-      setFormData({ name: '', email: '', phone: '', city: '', company: '', service: '' });
-    }, 4000);
+    
+    try {
+      await contactSchema.validate(formData, { abortEarly: false });
+      
+      const payload = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || '',
+        city: formData.city || '',
+        company_name: formData.company || '',
+        service_interested: formData.service || ''
+      };
+      
+      await submitContactInquiry(payload);
+      toast.success("Your inquiry has been submitted successfully!");
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setRecaptchaChecked(false);
+        setFormData({ name: '', email: '', phone: '', city: '', company: '', service: '' });
+      }, 4000);
+    } catch (err) {
+      if (err.name === 'ValidationError') {
+        const errors = {};
+        err.inner.forEach((validationError) => {
+          errors[validationError.path] = validationError.message;
+        });
+        setFormErrors(errors);
+        toast.error("Please fill in all required fields correctly.");
+      } else {
+        toast.error(err.message || "Failed to submit inquiry. Please try again.");
+        console.error("Failed to submit inquiry:", err);
+      }
+    }
   };
 
   const handleInputChange = (e) => {
@@ -73,6 +117,8 @@ export function ContactForm() {
             </h3>
           </div>
 
+
+
           {/* 2x3 Form Inputs Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -84,12 +130,14 @@ export function ContactForm() {
               <input
                 type="text"
                 name="name"
-                required
                 value={formData.name}
                 onChange={handleInputChange}
                 placeholder="Name"
-                className="w-full bg-white border border-[#e2e0f0] rounded-xl pl-11 pr-5 py-3.5 text-[14px] text-[#0a2e2c] placeholder-slate-400 focus:outline-none focus:border-[#3cc994] focus:ring-4 focus:ring-[#3cc994]/15 hover:border-slate-300 transition-all duration-200 shadow-sm"
+                className={`w-full bg-white border ${formErrors.name ? 'border-red-500 focus:ring-red-100 focus:border-red-500' : 'border-[#e2e0f0] focus:border-[#3cc994]'} rounded-xl pl-11 pr-5 py-3.5 text-[14px] text-[#0a2e2c] placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#3cc994]/15 hover:border-slate-300 transition-all duration-200 shadow-sm`}
               />
+              {formErrors.name && (
+                <p className="text-red-500 text-xs mt-1.5 ml-2 font-medium">{formErrors.name}</p>
+              )}
             </div>
 
             {/* Email */}
@@ -98,15 +146,17 @@ export function ContactForm() {
                 <Mail className="w-5 h-5 text-[#3cc994]/70" />
               </div>
               <input
-                type="email"
+                type="text"
                 name="email"
-                required
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="Email"
-                className="w-full bg-white border border-[#e2e0f0] rounded-xl pl-11 pr-8 py-3.5 text-[14px] text-[#0a2e2c] placeholder-slate-400 focus:outline-none focus:border-[#3cc994] focus:ring-4 focus:ring-[#3cc994]/15 hover:border-slate-300 transition-all duration-200 shadow-sm"
+                className={`w-full bg-white border ${formErrors.email ? 'border-red-500 focus:ring-red-100 focus:border-red-500' : 'border-[#e2e0f0] focus:border-[#3cc994]'} rounded-xl pl-11 pr-8 py-3.5 text-[14px] text-[#0a2e2c] placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#3cc994]/15 hover:border-slate-300 transition-all duration-200 shadow-sm`}
               />
-              <span className="absolute right-4 top-1/2 -translate-y-1/2 text-red-500 font-bold text-[16px] pointer-events-none">*</span>
+              <span className="absolute right-4 top-[18px] text-red-500 font-bold text-[16px] pointer-events-none">*</span>
+              {formErrors.email && (
+                <p className="text-red-500 text-xs mt-1.5 ml-2 font-medium">{formErrors.email}</p>
+              )}
             </div>
 
             {/* Phone */}
@@ -120,8 +170,11 @@ export function ContactForm() {
                 value={formData.phone}
                 onChange={handleInputChange}
                 placeholder="Phone"
-                className="w-full bg-white border border-[#e2e0f0] rounded-xl pl-11 pr-5 py-3.5 text-[14px] text-[#0a2e2c] placeholder-slate-400 focus:outline-none focus:border-[#3cc994] focus:ring-4 focus:ring-[#3cc994]/15 hover:border-slate-300 transition-all duration-200 shadow-sm"
+                className={`w-full bg-white border ${formErrors.phone ? 'border-red-500 focus:ring-red-100 focus:border-red-500' : 'border-[#e2e0f0] focus:border-[#3cc994]'} rounded-xl pl-11 pr-5 py-3.5 text-[14px] text-[#0a2e2c] placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#3cc994]/15 hover:border-slate-300 transition-all duration-200 shadow-sm`}
               />
+              {formErrors.phone && (
+                <p className="text-red-500 text-xs mt-1.5 ml-2 font-medium">{formErrors.phone}</p>
+              )}
             </div>
 
             {/* City */}
@@ -135,8 +188,11 @@ export function ContactForm() {
                 value={formData.city}
                 onChange={handleInputChange}
                 placeholder="City"
-                className="w-full bg-white border border-[#e2e0f0] rounded-xl pl-11 pr-5 py-3.5 text-[14px] text-[#0a2e2c] placeholder-slate-400 focus:outline-none focus:border-[#3cc994] focus:ring-4 focus:ring-[#3cc994]/15 hover:border-slate-300 transition-all duration-200 shadow-sm"
+                className={`w-full bg-white border ${formErrors.city ? 'border-red-500 focus:ring-red-100 focus:border-red-500' : 'border-[#e2e0f0] focus:border-[#3cc994]'} rounded-xl pl-11 pr-5 py-3.5 text-[14px] text-[#0a2e2c] placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#3cc994]/15 hover:border-slate-300 transition-all duration-200 shadow-sm`}
               />
+              {formErrors.city && (
+                <p className="text-red-500 text-xs mt-1.5 ml-2 font-medium">{formErrors.city}</p>
+              )}
             </div>
 
             {/* Company Name */}
@@ -203,10 +259,11 @@ export function ContactForm() {
           <div className="mt-4">
             <button
               type="submit"
+              disabled={loading}
               style={{ background: 'linear-gradient(135deg, #3cc994 0%, #00b4d8 100%)' }}
-              className="text-white font-bold px-12 py-4 rounded-xl text-[14px] tracking-wider transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-lg hover:shadow-[0_15px_30px_rgba(60,201,148,0.25)] uppercase cursor-pointer"
+              className={`text-white font-bold px-12 py-4 rounded-xl text-[14px] tracking-wider transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-lg hover:shadow-[0_15px_30px_rgba(60,201,148,0.25)] uppercase cursor-pointer ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
-              SUBMIT MESSAGE
+              {loading ? 'Submitting...' : 'SUBMIT MESSAGE'}
             </button>
           </div>
         </form>
